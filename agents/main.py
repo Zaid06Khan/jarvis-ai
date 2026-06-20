@@ -8,9 +8,12 @@ import os
 import re
 import json
 import datetime
+import subprocess
 from typing import List, Optional
-from fastapi import FastAPI, HTTPException
+import httpx
+from fastapi import FastAPI, HTTPException, Request, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.responses import JSONResponse
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
@@ -18,8 +21,24 @@ import fleet
 
 load_dotenv("/opt/edvisingu/.env")
 
-app = FastAPI(title="EdVisingU AI Orchestration Router", version="2.3.0")
+app = FastAPI(title="EdVisingU AI Orchestration Router", version="2.4.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+
+ROUTER_TOKEN = os.getenv("ROUTER_TOKEN", "")
+OPEN_PATHS = {"/health"}
+
+
+@app.middleware("http")
+async def auth_gate(request: Request, call_next):
+    """Loopback callers (hermes, n8n) need no token; external callers must present the bearer token."""
+    path = request.url.path
+    if path not in OPEN_PATHS:
+        host = request.client.host if request.client else ""
+        if host not in ("127.0.0.1", "::1", "localhost"):
+            if not ROUTER_TOKEN or request.headers.get("authorization") != f"Bearer {ROUTER_TOKEN}":
+                return JSONResponse({"detail": "unauthorized"}, status_code=401)
+    return await call_next(request)
+
 
 _SB = None
 
@@ -221,6 +240,112 @@ def overnight_summary():
     rows = (sb.table("content_queue").select("raw_content,created_at")
             .eq("platform", "overnight-brief").order("created_at", desc=True).limit(1).execute().data)
     return {"brief": rows[0]["raw_content"] if rows else "No overnight brief yet."}
+
+
+async def _run_overnight_bg(streams):
+    try:
+        await overnight_run(OvernightRequest(streams=streams))
+    except Exception:
+        pass
+
+
+@app.post("/overnight/trigger")
+async def overnight_trigger(bg: BackgroundTasks, req: Optional[OvernightRequest] = None):
+    streams = (req.streams if req and req.streams else ["content", "product"])
+    bg.add_task(_run_overnight_bg, streams)
+    return {"ok": True, "message": "overnight run started", "streams": streams}
+
+
+class EbookRequest(BaseModel):
+    niche: str = ""
+
+
+async def _gen_ebook_bg(niche):
+    try:
+        n = niche or "AI productivity"
+        meta, _ = await fleet.get_response(
+            "hermes-content",
+            f"Propose a sellable ebook for the niche '{n}'. Return ONLY raw JSON with keys: "
+            f"title, description (2 sentences), price (number in CAD). No code fences.",
+            max_tokens=500)
+        data = extract_json(meta) or {}
+        supabase().table("products").insert({
+            "name": data.get("title") or f"{n} Playbook",
+            "type": "ebook",
+            "price": float(data.get("price") or 17),
+            "description": data.get("description") or "",
+            "platform": "gumroad",
+            "active": False,
+        }).execute()
+    except Exception:
+        pass
+
+
+@app.post("/ebook/generate")
+async def ebook_generate(bg: BackgroundTasks, req: Optional[EbookRequest] = None):
+    bg.add_task(_gen_ebook_bg, (req.niche if req else ""))
+    return {"ok": True, "message": "ebook generation started"}
+
+
+@app.post("/brief/send")
+async def brief_send():
+    rows = (supabase().table("content_queue").select("raw_content")
+            .eq("platform", "overnight-brief").order("created_at", desc=True).limit(1).execute().data)
+    brief = rows[0]["raw_content"] if rows else "No overnight brief yet."
+    webhook = os.getenv("DISCORD_WEBHOOK_URL", "")
+    delivered = False
+    if webhook:
+        try:
+            async with httpx.AsyncClient(timeout=15) as c:
+                await c.post(webhook, json={"content": brief[:1900]})
+            delivered = True
+        except Exception:
+            delivered = False
+    return {"delivered": delivered, "brief": brief}
+
+
+@app.get("/system/stats")
+def system_stats():
+    vps = {"cpu": 0, "mem": 0, "disk": 0}
+    try:
+        import psutil
+        vps["cpu"] = psutil.cpu_percent(interval=0.3)
+        vps["mem"] = psutil.virtual_memory().percent
+        vps["disk"] = psutil.disk_usage("/").percent
+        vps["load"] = open("/proc/loadavg").read().split()[0]
+        secs = float(open("/proc/uptime").read().split()[0])
+        vps["uptime"] = f"{int(secs // 86400)}d {int((secs % 86400) // 3600)}h"
+    except Exception:
+        pass
+
+    def port_up(port):
+        try:
+            import socket
+            s = socket.socket(); s.settimeout(0.5)
+            ok = s.connect_ex(("127.0.0.1", port)) == 0; s.close()
+            return ok
+        except Exception:
+            return False
+
+    def svc_active(name):
+        try:
+            r = subprocess.run(["systemctl", "--user", "is-active", name],
+                               capture_output=True, text=True, timeout=3)
+            return r.stdout.strip() == "active"
+        except Exception:
+            return None
+
+    services = [
+        {"name": "FastAPI Router", "up": True},
+        {"name": "Hermes Gateway", "up": svc_active("hermes-gateway")},
+        {"name": "n8n", "up": port_up(5678)},
+        {"name": "Redis", "up": port_up(6379)},
+        {"name": "Supabase", "up": bool(os.getenv("SUPABASE_URL"))},
+    ]
+    return {"vps": vps, "services": services,
+            "providers": {"anthropic": bool(os.getenv("ANTHROPIC_API_KEY")),
+                          "openai": bool(os.getenv("OPENAI_API_KEY")),
+                          "gemini": bool(os.getenv("GOOGLE_AI_API_KEY"))}}
 
 
 @app.get("/v1/models")
