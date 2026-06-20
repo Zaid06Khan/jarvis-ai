@@ -14,13 +14,18 @@ import re
 from dotenv import load_dotenv
 from strands import Agent
 from strands.models.anthropic import AnthropicModel
+try:
+    from strands.types.exceptions import MaxTokensReachedException
+except Exception:  # pragma: no cover
+    class MaxTokensReachedException(Exception):
+        pass
 
 load_dotenv("/opt/edvisingu/.env")
 ANTHROPIC_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 SONNET = "claude-sonnet-4-6"
 HAIKU = "claude-haiku-4-5-20251001"
-GPT4O = "gpt-4o"
+GPT4O = os.getenv("CODEX_MODEL", "gpt-5.5")
 GEMINI_FLASH = "gemini-2.0-flash"
 
 ALWAYS_HAIKU = {"hermes-ops", "hermes-finance", "hermes-crm", "hermes-whop",
@@ -57,7 +62,7 @@ def choose_model(agent_name: str, message: str = "", max_tokens: int = 1024) -> 
 def tier_for(agent_name: str) -> str:
     intended = INTENDED_PROVIDER.get(agent_name)
     if intended == "openai":
-        return "codex/gpt-4o" if os.getenv("OPENAI_API_KEY") else "claude (codex pending key)"
+        return ("codex/" + GPT4O) if os.getenv("OPENAI_API_KEY") else "claude (codex pending key)"
     if intended == "gemini":
         return "gemini" if os.getenv("GOOGLE_AI_API_KEY") else "claude (gemini pending key)"
     return "haiku" if agent_name in ALWAYS_HAIKU else "haiku|sonnet (auto)"
@@ -131,8 +136,15 @@ async def get_response(agent_name: str, message: str, history=None, max_tokens: 
         agent = Agent(model=model, system_prompt=SOULS[agent_name],
                       messages=_to_strands_messages(history), callback_handler=None)
         result = await agent.invoke_async(message)
+    except MaxTokensReachedException:
+        # response was truncated by max_tokens -> retry once with generous headroom
+        big = max(max_tokens * 3, 6000)
+        model2, eff = _build_model(agent_name, base_model, big, force_model)
+        agent = Agent(model=model2, system_prompt=SOULS[agent_name], callback_handler=None)
+        result = await agent.invoke_async(message)
     except Exception:
-        fallback = AnthropicModel(client_args={"api_key": ANTHROPIC_KEY}, model_id=base_model, max_tokens=max_tokens)
+        fallback = AnthropicModel(client_args={"api_key": ANTHROPIC_KEY}, model_id=base_model,
+                                  max_tokens=max(max_tokens, 4000))
         agent = Agent(model=fallback, system_prompt=SOULS[agent_name], callback_handler=None)
         result = await agent.invoke_async(message)
         eff = base_model

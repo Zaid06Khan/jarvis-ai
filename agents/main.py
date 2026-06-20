@@ -144,15 +144,15 @@ async def build_collab(req: CollabRequest):
     plan, m_plan = await fleet.get_response(
         "hermes-core",
         f"Create a concise technical plan to build: {req.task}. Numbered steps, key files, and stack. Under 180 words.",
-        max_tokens=900)
+        max_tokens=2000)
     code, m_code = await fleet.get_response(
         "hermes-builder",
         f"Task: {req.task}\n\nApproved plan:\n{plan}\n\nImplement the core code now. Runnable, with brief comments.",
-        max_tokens=2500)
+        max_tokens=6000)
     review, m_rev = await fleet.get_response(
         "hermes-core",
         f"Review this implementation for bugs, security issues, and gaps. 3-6 sharp bullet points:\n\n{code[:4500]}",
-        max_tokens=700)
+        max_tokens=1500)
     return {"task": req.task,
             "plan": plan, "planner": m_plan,
             "code": code, "coder": m_code,
