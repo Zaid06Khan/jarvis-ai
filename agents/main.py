@@ -1,8 +1,7 @@
 """EdVisingU AI Orchestration Router — fronts the in-process Strands Hermes fleet.
 
-Endpoints are async and await Strands' async API so all model calls run on the
-single FastAPI event loop. /content/factory generates content and queues it in
-Supabase (all DB secrets stay here — n8n just triggers this endpoint).
+Cost-aware: /chat and /v1 default to Haiku and only escalate to Sonnet for complex
+tasks (see fleet.choose_model). /content/* force Sonnet (heavy generation).
 """
 import os
 import re
@@ -17,7 +16,7 @@ import fleet  # in-process specialist agents
 
 load_dotenv("/opt/edvisingu/.env")
 
-app = FastAPI(title="EdVisingU AI Orchestration Router", version="2.1.0")
+app = FastAPI(title="EdVisingU AI Orchestration Router", version="2.2.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 _SB = None
@@ -54,7 +53,7 @@ def extract_json(text: str):
 class ChatRequest(BaseModel):
     message: str
     agent: str = "hermes-core"
-    max_tokens: int = 2048
+    max_tokens: int = 1024
 
 
 class ContentRequest(BaseModel):
@@ -77,13 +76,13 @@ class OAIRequest(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "running", "version": "2.1.0", "ecosystem": "EdVisingU",
+    return {"status": "running", "version": "2.2.0", "ecosystem": "EdVisingU",
             "fleet_agents": len(fleet.AGENTS)}
 
 
 @app.get("/agents")
 def agents():
-    return {"agents": [{"name": a, "model": fleet.model_for(a),
+    return {"agents": [{"name": a, "tier": fleet.tier_for(a),
                         "intended": fleet.INTENDED_PROVIDER.get(a, "anthropic")} for a in fleet.AGENTS]}
 
 
@@ -98,17 +97,17 @@ async def generate_content(req: ContentRequest):
     prompt = (f"Write content about: {req.topic}\nTone: {req.tone}\n"
               f"Generate for these platforms: {', '.join(req.platforms)}\n"
               "Return JSON with platform names as keys and the content as values.")
-    text, model = await fleet.get_response("hermes-content", prompt, max_tokens=4096)
+    text, model = await fleet.get_response("hermes-content", prompt, max_tokens=4096, force_model=fleet.SONNET)
     return {"topic": req.topic, "content": text, "model": model}
 
 
 @app.post("/content/factory")
 async def content_factory(req: ContentRequest):
-    """Generate platform content AND queue each piece in Supabase content_queue."""
+    """Generate platform content AND queue each piece in Supabase content_queue (Sonnet)."""
     prompt = (f"Create ready-to-post social content about: {req.topic}\nTone: {req.tone}\n"
               f"Return ONLY a raw JSON object (no markdown, no commentary) whose keys are exactly: "
               f"{', '.join(req.platforms)}. Each value is the finished content for that platform.")
-    text, model = await fleet.get_response("hermes-content", prompt, max_tokens=4096)
+    text, model = await fleet.get_response("hermes-content", prompt, max_tokens=4096, force_model=fleet.SONNET)
     parsed = extract_json(text)
     sb = supabase()
     inserted = []
@@ -137,7 +136,7 @@ async def oai_chat(req: OAIRequest):
     agent = req.model if req.model in fleet.AGENTS else "hermes-core"
     history = [{"role": m.role, "content": m.content} for m in req.messages[:-1]]
     last = req.messages[-1].content if req.messages else ""
-    text, model = await fleet.get_response(agent, last, history=history, max_tokens=req.max_tokens or 2048)
+    text, model = await fleet.get_response(agent, last, history=history, max_tokens=req.max_tokens or 1024)
     return {"id": "jarvis", "object": "chat.completion", "model": agent,
             "choices": [{"index": 0, "message": {"role": "assistant", "content": text},
                          "finish_reason": "stop"}]}

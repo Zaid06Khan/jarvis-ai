@@ -1,11 +1,13 @@
-"""EdVisingU Hermes specialist fleet — in-process Strands agents (async).
+"""EdVisingU Hermes specialist fleet — in-process Strands agents (async) with cost-aware tiering.
 
-Each agent is a Strands Agent with its own SOUL (system prompt) and model.
-Manual Section 26 routing matrix: Sonnet / Haiku / Gemini / GPT-4o.
-Gemini & GPT-4o agents fall back to Claude Sonnet until those keys are in .env.
-Calls use Strands' async API so they run on the FastAPI event loop.
+Model tiering (cost control):
+  - ALWAYS_HAIKU agents (ops/finance/crm/whop/etsy/gumroad): always Haiku.
+  - All other agents: Haiku for simple/short requests, Sonnet ONLY for complex
+    tasks (long input, large max_tokens, or heavy-task verbs like write/research/analyze).
+Gemini & GPT-4o agents fall back to Claude until those keys are in .env.
 """
 import os
+import re
 from dotenv import load_dotenv
 from strands import Agent
 from strands.models.anthropic import AnthropicModel
@@ -16,7 +18,8 @@ ANTHROPIC_KEY = os.getenv("ANTHROPIC_API_KEY")
 SONNET = "claude-sonnet-4-6"
 HAIKU = "claude-haiku-4-5-20251001"
 
-HAIKU_AGENTS = {"hermes-ops", "hermes-finance", "hermes-crm", "hermes-whop",
+# Agents that ALWAYS use cheap/fast Haiku
+ALWAYS_HAIKU = {"hermes-ops", "hermes-finance", "hermes-crm", "hermes-whop",
                 "hermes-etsy", "hermes-gumroad"}
 
 INTENDED_PROVIDER = {
@@ -24,6 +27,34 @@ INTENDED_PROVIDER = {
     "hermes-social": "gemini", "hermes-seo": "gemini", "hermes-tiktok": "gemini",
     "hermes-ads": "gemini", "hermes-pinterest": "gemini",
 }
+
+# Heavy-task signals -> escalate to Sonnet
+HEAVY_RE = re.compile(
+    r"\b(write|draft|compose|create|full|essay|article|blog|newsletter|"
+    r"script|sequence|research|analyz|analys|outline|plan|strategy|"
+    r"breakdown|long[- ]?form|generate|rewrite|expand|summari[sz]e|"
+    r"deep dive|step[- ]?by[- ]?step|proposal|report)\b", re.I)
+
+COMPLEX_MAX_TOKENS = 2048   # requests asking for >= this many tokens are complex
+COMPLEX_MSG_CHARS = 280     # messages longer than this are complex
+
+
+def is_complex(message: str, max_tokens: int) -> bool:
+    return ((max_tokens or 0) >= COMPLEX_MAX_TOKENS
+            or len(message or "") > COMPLEX_MSG_CHARS
+            or bool(HEAVY_RE.search(message or "")))
+
+
+def choose_model(agent_name: str, message: str = "", max_tokens: int = 1024) -> str:
+    """Cost-aware model selection: Haiku unless the task is genuinely complex."""
+    if agent_name in ALWAYS_HAIKU:
+        return HAIKU
+    return SONNET if is_complex(message, max_tokens) else HAIKU
+
+
+def tier_for(agent_name: str) -> str:
+    return "haiku" if agent_name in ALWAYS_HAIKU else "haiku|sonnet (auto)"
+
 
 SOULS = {
  "hermes-core": "You are Hermes Core, primary AI executive assistant to Dr. Andre De Freitas (Dr. D), founder of EdVisingU, CrediVersity, DrD Learn and HireEd Nexus Labs. Think like a founder, not an assistant. Be direct, specific, execution-focused. Tie every output to revenue, time saved, or scale. Never vague.",
@@ -51,7 +82,8 @@ SOULS = {
 
 
 def model_for(agent_name: str) -> str:
-    return HAIKU if agent_name in HAIKU_AGENTS else SONNET
+    """Floor model (for display)."""
+    return HAIKU if agent_name in ALWAYS_HAIKU else SONNET
 
 
 def _to_strands_messages(history):
@@ -64,11 +96,12 @@ def _to_strands_messages(history):
     return msgs
 
 
-async def get_response(agent_name: str, message: str, history=None, max_tokens: int = 2048):
-    """Async: return (text, model_id) from the named specialist agent."""
+async def get_response(agent_name: str, message: str, history=None, max_tokens: int = 1024,
+                       force_model: str = None):
+    """Async: return (text, model_id). Model chosen cost-aware unless force_model given."""
     if agent_name not in SOULS:
         agent_name = "hermes-core"
-    model_id = model_for(agent_name)
+    model_id = force_model or choose_model(agent_name, message, max_tokens)
     model = AnthropicModel(client_args={"api_key": ANTHROPIC_KEY}, model_id=model_id, max_tokens=max_tokens)
     try:
         agent = Agent(model=model, system_prompt=SOULS[agent_name],
