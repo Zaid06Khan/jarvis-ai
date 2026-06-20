@@ -1,10 +1,14 @@
 """EdVisingU AI Orchestration Router — fronts the in-process Strands Hermes fleet.
 
 Endpoints are async and await Strands' async API so all model calls run on the
-single FastAPI event loop (no per-request asyncio.run / loop-closed errors).
+single FastAPI event loop. /content/factory generates content and queues it in
+Supabase (all DB secrets stay here — n8n just triggers this endpoint).
 """
+import os
+import re
+import json
 from typing import List, Optional
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
@@ -13,8 +17,38 @@ import fleet  # in-process specialist agents
 
 load_dotenv("/opt/edvisingu/.env")
 
-app = FastAPI(title="EdVisingU AI Orchestration Router", version="2.0.0")
+app = FastAPI(title="EdVisingU AI Orchestration Router", version="2.1.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+
+_SB = None
+
+
+def supabase():
+    global _SB
+    if _SB is None:
+        from supabase import create_client
+        url = os.getenv("SUPABASE_URL")
+        key = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+        if not url or not key:
+            raise HTTPException(status_code=503, detail="Supabase not configured in .env")
+        _SB = create_client(url, key)
+    return _SB
+
+
+def extract_json(text: str):
+    t = text.strip()
+    t = re.sub(r"^```(?:json)?", "", t).strip()
+    t = re.sub(r"```$", "", t).strip()
+    try:
+        return json.loads(t)
+    except Exception:
+        m = re.search(r"\{.*\}", t, re.S)
+        if m:
+            try:
+                return json.loads(m.group(0))
+            except Exception:
+                return None
+    return None
 
 
 class ChatRequest(BaseModel):
@@ -43,7 +77,7 @@ class OAIRequest(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "running", "version": "2.0.0", "ecosystem": "EdVisingU",
+    return {"status": "running", "version": "2.1.0", "ecosystem": "EdVisingU",
             "fleet_agents": len(fleet.AGENTS)}
 
 
@@ -66,6 +100,31 @@ async def generate_content(req: ContentRequest):
               "Return JSON with platform names as keys and the content as values.")
     text, model = await fleet.get_response("hermes-content", prompt, max_tokens=4096)
     return {"topic": req.topic, "content": text, "model": model}
+
+
+@app.post("/content/factory")
+async def content_factory(req: ContentRequest):
+    """Generate platform content AND queue each piece in Supabase content_queue."""
+    prompt = (f"Create ready-to-post social content about: {req.topic}\nTone: {req.tone}\n"
+              f"Return ONLY a raw JSON object (no markdown, no commentary) whose keys are exactly: "
+              f"{', '.join(req.platforms)}. Each value is the finished content for that platform.")
+    text, model = await fleet.get_response("hermes-content", prompt, max_tokens=4096)
+    parsed = extract_json(text)
+    sb = supabase()
+    inserted = []
+    if isinstance(parsed, dict) and parsed:
+        for platform, content in parsed.items():
+            body = content if isinstance(content, str) else json.dumps(content)
+            sb.table("content_queue").insert(
+                {"topic": req.topic, "platform": str(platform), "raw_content": body, "status": "pending"}
+            ).execute()
+            inserted.append(str(platform))
+    else:
+        sb.table("content_queue").insert(
+            {"topic": req.topic, "platform": "mixed", "raw_content": text, "status": "pending"}
+        ).execute()
+        inserted.append("mixed")
+    return {"topic": req.topic, "model": model, "queued": len(inserted), "platforms": inserted}
 
 
 @app.get("/v1/models")
