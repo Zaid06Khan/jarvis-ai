@@ -1,0 +1,35 @@
+{
+  "name": "Overnight Engine",
+  "id": "overnightengine01",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": { "interval": [ { "field": "cronExpression", "expression": "0 2 * * *" } ] }
+      },
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "name": "Every night 2am",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/overnight/run",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ { \"streams\": [\"content\", \"product\"] } }}",
+        "options": { "timeout": 175000 }
+      },
+      "id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "name": "Run Overnight Engine",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [480, 300]
+    }
+  ],
+  "connections": {
+    "Every night 2am": { "main": [ [ { "node": "Run Overnight Engine", "type": "main", "index": 0 } ] ] }
+  },
+  "settings": { "executionOrder": "v1" }
+}

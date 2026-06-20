@@ -1,10 +1,13 @@
-"""EdVisingU Hermes specialist fleet — in-process Strands agents (async) with cost-aware tiering.
+"""EdVisingU Hermes specialist fleet — in-process Strands agents (async) with cost-aware tiering
+and multi-provider support (Claude + Codex/GPT-4o + Gemini).
 
 Model tiering (cost control):
   - ALWAYS_HAIKU agents (ops/finance/crm/whop/etsy/gumroad): always Haiku.
-  - All other agents: Haiku for simple/short requests, Sonnet ONLY for complex
-    tasks (long input, large max_tokens, or heavy-task verbs like write/research/analyze).
-Gemini & GPT-4o agents fall back to Claude until those keys are in .env.
+  - Other agents: Haiku for simple/short, Sonnet only for complex tasks.
+Provider routing:
+  - hermes-builder -> OpenAI Codex/GPT-4o when OPENAI_API_KEY is set (else Claude).
+  - gemini agents -> Google Gemini when GOOGLE_AI_API_KEY is set (else Claude).
+  - everything else -> Anthropic Claude.
 """
 import os
 import re
@@ -17,26 +20,26 @@ ANTHROPIC_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 SONNET = "claude-sonnet-4-6"
 HAIKU = "claude-haiku-4-5-20251001"
+GPT4O = "gpt-4o"
+GEMINI_FLASH = "gemini-2.0-flash"
 
-# Agents that ALWAYS use cheap/fast Haiku
 ALWAYS_HAIKU = {"hermes-ops", "hermes-finance", "hermes-crm", "hermes-whop",
                 "hermes-etsy", "hermes-gumroad"}
 
 INTENDED_PROVIDER = {
-    "hermes-builder": "openai:gpt-4o",
+    "hermes-builder": "openai",
     "hermes-social": "gemini", "hermes-seo": "gemini", "hermes-tiktok": "gemini",
     "hermes-ads": "gemini", "hermes-pinterest": "gemini",
 }
 
-# Heavy-task signals -> escalate to Sonnet
 HEAVY_RE = re.compile(
     r"\b(write|draft|compose|create|full|essay|article|blog|newsletter|"
     r"script|sequence|research|analyz|analys|outline|plan|strategy|"
     r"breakdown|long[- ]?form|generate|rewrite|expand|summari[sz]e|"
-    r"deep dive|step[- ]?by[- ]?step|proposal|report)\b", re.I)
+    r"deep dive|step[- ]?by[- ]?step|proposal|report|implement|code|build)\b", re.I)
 
-COMPLEX_MAX_TOKENS = 2048   # requests asking for >= this many tokens are complex
-COMPLEX_MSG_CHARS = 280     # messages longer than this are complex
+COMPLEX_MAX_TOKENS = 2048
+COMPLEX_MSG_CHARS = 280
 
 
 def is_complex(message: str, max_tokens: int) -> bool:
@@ -46,13 +49,17 @@ def is_complex(message: str, max_tokens: int) -> bool:
 
 
 def choose_model(agent_name: str, message: str = "", max_tokens: int = 1024) -> str:
-    """Cost-aware model selection: Haiku unless the task is genuinely complex."""
     if agent_name in ALWAYS_HAIKU:
         return HAIKU
     return SONNET if is_complex(message, max_tokens) else HAIKU
 
 
 def tier_for(agent_name: str) -> str:
+    intended = INTENDED_PROVIDER.get(agent_name)
+    if intended == "openai":
+        return "codex/gpt-4o" if os.getenv("OPENAI_API_KEY") else "claude (codex pending key)"
+    if intended == "gemini":
+        return "gemini" if os.getenv("GOOGLE_AI_API_KEY") else "claude (gemini pending key)"
     return "haiku" if agent_name in ALWAYS_HAIKU else "haiku|sonnet (auto)"
 
 
@@ -72,7 +79,7 @@ SOULS = {
  "hermes-whop": "You are Hermes Whop, membership operations manager. Product creation, pricing, discount codes, member access, webhook events, MRR reporting. Verify webhook signatures. Report MRR weekly.",
  "hermes-etsy": "You are Hermes Etsy, Etsy shop assistant. Listing copy, titles, 13-tag optimization, pricing. CRITICAL: Etsy publishing is SEMI-MANUAL (no API automation) — generate content for Dr. D to paste into Seller Hub.",
  "hermes-gumroad": "You are Hermes Gumroad, product-listing agent. Gumroad product listings, pricing, sales-page copy and discount codes. Conversion-focused, concise.",
- "hermes-builder": "You are Hermes Builder, the product development agent. Product idea in, working scaffold out. Create repos, write boilerplate, design schemas and specs. GitHub repo first, README always, MVP thinking, everything modular.",
+ "hermes-builder": "You are Hermes Builder, the product development agent (Codex). Product idea in, working scaffold out. Create repos, write boilerplate, design schemas and specs. GitHub repo first, README always, MVP thinking, everything modular. Output runnable, well-structured code.",
  "hermes-social": "You are Hermes Social, community and social agent. Discord announcements, Whop events, engagement responses and community growth ideas. Energetic, on-brand, concise.",
  "hermes-seo": "You are Hermes SEO, SEO and content research specialist. Keyword research (with search-volume estimate and intent), content briefs, meta tags, internal linking, competitor gaps. Primary sites: edvisingu.com, crediversity.com, gohireed.com.",
  "hermes-tiktok": "You are Hermes TikTok, TikTok content specialist. 60-90s scripts that open with a pattern-interrupt hook in the first 2 seconds and end with a clear CTA. Captions, hashtags, content calendar. Target 4-5x/week.",
@@ -82,8 +89,25 @@ SOULS = {
 
 
 def model_for(agent_name: str) -> str:
-    """Floor model (for display)."""
     return HAIKU if agent_name in ALWAYS_HAIKU else SONNET
+
+
+def _build_model(agent_name: str, model_id: str, max_tokens: int, force_model):
+    """Return (strands_model, effective_model_id). Native provider when its key exists; else Claude."""
+    intended = INTENDED_PROVIDER.get(agent_name)
+    if not force_model and intended == "openai" and os.getenv("OPENAI_API_KEY"):
+        try:
+            from strands.models.openai import OpenAIModel
+            return OpenAIModel(client_args={"api_key": os.getenv("OPENAI_API_KEY")}, model_id=GPT4O), GPT4O
+        except Exception:
+            pass
+    if not force_model and intended == "gemini" and os.getenv("GOOGLE_AI_API_KEY"):
+        try:
+            from strands.models.gemini import GeminiModel
+            return GeminiModel(client_args={"api_key": os.getenv("GOOGLE_AI_API_KEY")}, model_id=GEMINI_FLASH), GEMINI_FLASH
+        except Exception:
+            pass
+    return AnthropicModel(client_args={"api_key": ANTHROPIC_KEY}, model_id=model_id, max_tokens=max_tokens), model_id
 
 
 def _to_strands_messages(history):
@@ -98,19 +122,21 @@ def _to_strands_messages(history):
 
 async def get_response(agent_name: str, message: str, history=None, max_tokens: int = 1024,
                        force_model: str = None):
-    """Async: return (text, model_id). Model chosen cost-aware unless force_model given."""
+    """Async: return (text, effective_model_id)."""
     if agent_name not in SOULS:
         agent_name = "hermes-core"
-    model_id = force_model or choose_model(agent_name, message, max_tokens)
-    model = AnthropicModel(client_args={"api_key": ANTHROPIC_KEY}, model_id=model_id, max_tokens=max_tokens)
+    base_model = force_model or choose_model(agent_name, message, max_tokens)
+    model, eff = _build_model(agent_name, base_model, max_tokens, force_model)
     try:
         agent = Agent(model=model, system_prompt=SOULS[agent_name],
                       messages=_to_strands_messages(history), callback_handler=None)
         result = await agent.invoke_async(message)
     except Exception:
-        agent = Agent(model=model, system_prompt=SOULS[agent_name], callback_handler=None)
+        fallback = AnthropicModel(client_args={"api_key": ANTHROPIC_KEY}, model_id=base_model, max_tokens=max_tokens)
+        agent = Agent(model=fallback, system_prompt=SOULS[agent_name], callback_handler=None)
         result = await agent.invoke_async(message)
-    return str(result).strip(), model_id
+        eff = base_model
+    return str(result).strip(), eff
 
 
 AGENTS = list(SOULS.keys())
