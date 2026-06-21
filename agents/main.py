@@ -74,7 +74,7 @@ def extract_json(text: str):
 class ChatRequest(BaseModel):
     message: str
     agent: str = "hermes-core"
-    max_tokens: int = 1024
+    max_tokens: int = 4096
 
 
 class ContentRequest(BaseModel):

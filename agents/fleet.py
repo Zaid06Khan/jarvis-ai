@@ -144,10 +144,14 @@ async def get_response(agent_name: str, message: str, history=None, max_tokens: 
         result = await agent.invoke_async(message)
     except MaxTokensReachedException:
         # response was truncated by max_tokens -> retry once with generous headroom
-        big = max(max_tokens * 3, 6000)
-        model2, eff = _build_model(agent_name, base_model, big, force_model, codex_complex)
-        agent = Agent(model=model2, system_prompt=SOULS[agent_name], callback_handler=None)
-        result = await agent.invoke_async(message)
+        try:
+            big = max(max_tokens * 3, 8000)
+            model2, eff = _build_model(agent_name, base_model, big, force_model, codex_complex)
+            agent = Agent(model=model2, system_prompt=SOULS[agent_name], callback_handler=None)
+            result = await agent.invoke_async(message)
+        except Exception:
+            return ("I started a long answer but hit the output limit. "
+                    "Ask for a shorter or more specific response."), eff
     except Exception:
         fallback = AnthropicModel(client_args={"api_key": ANTHROPIC_KEY}, model_id=base_model,
                                   max_tokens=max(max_tokens, 4000))
