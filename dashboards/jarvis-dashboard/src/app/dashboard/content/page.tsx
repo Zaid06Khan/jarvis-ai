@@ -44,7 +44,7 @@ export default function ContentPage() {
         <Select value={platform} onValueChange={setPlatform}>
           <SelectTrigger className="w-40"><SelectValue placeholder="Platform" /></SelectTrigger>
           <SelectContent>
-            {["all", "linkedin", "tiktok", "instagram", "email", "product-idea"].map((p) => (
+            {["all", "image", "linkedin", "tiktok", "instagram", "email", "product-idea"].map((p) => (
               <SelectItem key={p} value={p}>{p === "all" ? "All platforms" : p}</SelectItem>
             ))}
           </SelectContent>
@@ -68,9 +68,12 @@ export default function ContentPage() {
           <div className="divide-y">
             {items.map((it) => (
               <div key={it.id} className="flex items-center gap-3 p-4 hover:bg-accent/30 transition-colors">
+                {it.platform === "image" && (
+                  <img src={it.raw_content} alt="" className="h-12 w-12 rounded-md object-cover border shrink-0" />
+                )}
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-medium truncate">{it.topic}</p>
-                  <p className="text-xs text-muted-foreground line-clamp-1 mt-0.5">{it.raw_content}</p>
+                  <p className="text-xs text-muted-foreground line-clamp-1 mt-0.5">{it.platform === "image" ? "🖼️ Generated image" : it.raw_content}</p>
                 </div>
                 <Badge variant="outline" className="text-[10px] shrink-0">{it.platform}</Badge>
                 <Badge variant="outline" className={cn("text-[10px] shrink-0", STATUS_COLORS[it.status] || "")}>{it.status}</Badge>
@@ -93,9 +96,13 @@ export default function ContentPage() {
             <Badge variant="outline">{preview?.platform}</Badge>
             <Badge variant="outline" className={STATUS_COLORS[preview?.status] || ""}>{preview?.status}</Badge>
           </div>
-          <div className="max-h-[60vh] overflow-y-auto whitespace-pre-wrap text-sm bg-card/50 rounded-lg border p-4">
-            {preview?.raw_content}
-          </div>
+          {preview?.platform === "image" ? (
+            <img src={preview.raw_content} alt={preview.topic} className="rounded-lg border w-full max-h-[60vh] object-contain bg-card/50" />
+          ) : (
+            <div className="max-h-[60vh] overflow-y-auto whitespace-pre-wrap text-sm bg-card/50 rounded-lg border p-4">
+              {preview?.raw_content}
+            </div>
+          )}
           <div className="flex gap-2 justify-end">
             <Button variant="outline" onClick={() => { setItemStatus(preview.id, "rejected"); setPreview(null); }}>Reject</Button>
             <Button onClick={() => { setItemStatus(preview.id, "approved"); setPreview(null); }}>Approve</Button>

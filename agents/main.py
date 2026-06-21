@@ -87,6 +87,12 @@ class CollabRequest(BaseModel):
     task: str
 
 
+class ImageRequest(BaseModel):
+    prompt: str
+    size: Optional[str] = None       # 1024x1024 | 1792x1024 | 1024x1792
+    topic: Optional[str] = None
+
+
 class OvernightRequest(BaseModel):
     streams: Optional[List[str]] = None  # subset of: content, product, ebook
 
@@ -117,6 +123,11 @@ def agents():
 
 @app.post("/chat")
 async def chat(req: ChatRequest):
+    # hermes-image generates a picture instead of text
+    if req.agent == "hermes-image":
+        res = await _generate_image(req.message)
+        return {"response": f"🖼️ Generated image: {res['url']}", "agent": "hermes-image",
+                "model": "dall-e-3", "image": res["url"], "size": res["size"]}
     text, model = await fleet.get_response(req.agent, req.message, max_tokens=req.max_tokens)
     return {"response": text, "agent": req.agent if req.agent in fleet.AGENTS else "hermes-core", "model": model}
 
@@ -155,6 +166,65 @@ async def _queue_content(topic: str, platforms: List[str]):
 async def content_factory(req: ContentRequest):
     queued, model = await _queue_content(req.topic, req.platforms)
     return {"topic": req.topic, "model": model, "queued": len(queued), "platforms": queued}
+
+
+IMAGE_VALID_SIZES = {"1024x1024", "1536x1024", "1024x1536", "auto"}
+IMAGE_SIZE_MAP = {"1792x1024": "1536x1024", "1024x1792": "1024x1536"}  # dall-e -> gpt-image
+
+
+def _infer_size(text: str) -> str:
+    t = (text or "").lower()
+    if any(w in t for w in ["cover", "landscape", "banner", "wide", "header", "16:9", "thumbnail"]):
+        return "1536x1024"
+    if any(w in t for w in ["tiktok", "vertical", "story", "reel", "9:16", "phone", "portrait"]):
+        return "1024x1536"
+    return "1024x1024"
+
+
+async def _generate_image(prompt: str, size: str = None, topic: str = None) -> dict:
+    """Generate via DALL-E 3, upload to Supabase brand-assets, queue it, return public URL."""
+    import base64
+    key = os.getenv("OPENAI_API_KEY")
+    if not key:
+        raise HTTPException(status_code=503, detail="OPENAI_API_KEY not configured")
+    model = os.getenv("IMAGE_MODEL", "gpt-image-1")
+    chosen = size or _infer_size(prompt)
+    chosen = IMAGE_SIZE_MAP.get(chosen, chosen)
+    if chosen not in IMAGE_VALID_SIZES:
+        chosen = "1024x1024"
+    async with httpx.AsyncClient(timeout=180) as c:
+        r = await c.post("https://api.openai.com/v1/images/generations",
+                         headers={"Authorization": f"Bearer {key}"},
+                         json={"model": model, "prompt": prompt, "size": chosen, "n": 1})
+        if r.status_code != 200:
+            raise HTTPException(status_code=502, detail=f"DALL-E error: {r.text[:200]}")
+        payload = r.json()["data"][0]
+    if payload.get("b64_json"):
+        img_bytes = base64.b64decode(payload["b64_json"])
+    elif payload.get("url"):
+        async with httpx.AsyncClient(timeout=120) as c2:
+            ir = await c2.get(payload["url"])
+            img_bytes = ir.content
+    else:
+        raise HTTPException(status_code=502, detail="DALL-E returned no image data")
+    fname = f"dalle/{datetime.datetime.utcnow().strftime('%Y%m%d-%H%M%S')}-{abs(hash(prompt)) % 100000}.png"
+    sb = supabase()
+    try:
+        sb.storage.from_("brand-assets").upload(
+            fname, img_bytes, {"content-type": "image/png", "upsert": "true"})
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"Storage upload failed: {str(e)[:160]}")
+    url = sb.storage.from_("brand-assets").get_public_url(fname)
+    revised = payload.get("revised_prompt", prompt)
+    sb.table("content_queue").insert(
+        {"topic": (topic or prompt)[:120], "platform": "image",
+         "raw_content": url, "status": "pending"}).execute()
+    return {"url": url, "size": chosen, "prompt": prompt, "revised_prompt": revised}
+
+
+@app.post("/image/generate")
+async def image_generate(req: ImageRequest):
+    return await _generate_image(req.prompt, req.size, req.topic)
 
 
 @app.post("/build/collab")
@@ -345,6 +415,7 @@ def system_stats():
     return {"vps": vps, "services": services,
             "providers": {"anthropic": bool(os.getenv("ANTHROPIC_API_KEY")),
                           "openai": bool(os.getenv("OPENAI_API_KEY")),
+                          "dalle": bool(os.getenv("OPENAI_API_KEY")),
                           "gemini": bool(os.getenv("GOOGLE_AI_API_KEY"))}}
 
 

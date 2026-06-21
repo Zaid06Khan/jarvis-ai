@@ -77,7 +77,7 @@ export default function SystemPage() {
             {[
               { k: "anthropic", label: "Anthropic (Claude)" },
               { k: "openai", label: "OpenAI (Codex / GPT-5.5)" },
-              { k: "gemini", label: "Google (Gemini)" },
+              { k: "dalle", label: "OpenAI Image (DALL-E 3)" },
             ].map((p) => (
               <div key={p.k} className="flex items-center justify-between rounded-lg border bg-card/40 px-4 py-3">
                 <div className="flex items-center gap-3"><Dot up={!!providers[p.k]} /><span className="text-sm font-medium">{p.label}</span></div>
