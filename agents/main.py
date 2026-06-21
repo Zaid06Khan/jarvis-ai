@@ -167,7 +167,7 @@ async def build_collab(req: CollabRequest):
     code, m_code = await fleet.get_response(
         "hermes-builder",
         f"Task: {req.task}\n\nApproved plan:\n{plan}\n\nImplement the core code now. Runnable, with brief comments.",
-        max_tokens=6000)
+        max_tokens=6000, codex_complex=True)  # multi-step build -> gpt-5.5
     review, m_rev = await fleet.get_response(
         "hermes-core",
         f"Review this implementation for bugs, security issues, and gaps. 3-6 sharp bullet points:\n\n{code[:4500]}",

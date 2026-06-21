@@ -25,7 +25,9 @@ ANTHROPIC_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 SONNET = "claude-sonnet-4-6"
 HAIKU = "claude-haiku-4-5-20251001"
-GPT4O = os.getenv("CODEX_MODEL", "gpt-5.5")
+# Codex tiering: routine code -> gpt-4o (cheap); complex multi-step builds -> gpt-5.5
+CODEX_ROUTINE = os.getenv("CODEX_MODEL", "gpt-4o")
+CODEX_COMPLEX = os.getenv("CODEX_MODEL_COMPLEX", "gpt-5.5")
 GEMINI_FLASH = "gemini-2.0-flash"
 
 ALWAYS_HAIKU = {"hermes-ops", "hermes-finance", "hermes-crm", "hermes-whop",
@@ -62,7 +64,7 @@ def choose_model(agent_name: str, message: str = "", max_tokens: int = 1024) -> 
 def tier_for(agent_name: str) -> str:
     intended = INTENDED_PROVIDER.get(agent_name)
     if intended == "openai":
-        return ("codex/" + GPT4O) if os.getenv("OPENAI_API_KEY") else "claude (codex pending key)"
+        return (f"codex {CODEX_ROUTINE}/{CODEX_COMPLEX} (auto)") if os.getenv("OPENAI_API_KEY") else "claude (codex pending key)"
     if intended == "gemini":
         return "gemini" if os.getenv("GOOGLE_AI_API_KEY") else "claude (gemini pending key)"
     return "haiku" if agent_name in ALWAYS_HAIKU else "haiku|sonnet (auto)"
@@ -97,13 +99,14 @@ def model_for(agent_name: str) -> str:
     return HAIKU if agent_name in ALWAYS_HAIKU else SONNET
 
 
-def _build_model(agent_name: str, model_id: str, max_tokens: int, force_model):
+def _build_model(agent_name: str, model_id: str, max_tokens: int, force_model, codex_complex: bool = False):
     """Return (strands_model, effective_model_id). Native provider when its key exists; else Claude."""
     intended = INTENDED_PROVIDER.get(agent_name)
     if not force_model and intended == "openai" and os.getenv("OPENAI_API_KEY"):
         try:
             from strands.models.openai import OpenAIModel
-            return OpenAIModel(client_args={"api_key": os.getenv("OPENAI_API_KEY")}, model_id=GPT4O), GPT4O
+            codex = CODEX_COMPLEX if codex_complex else CODEX_ROUTINE
+            return OpenAIModel(client_args={"api_key": os.getenv("OPENAI_API_KEY")}, model_id=codex), codex
         except Exception:
             pass
     if not force_model and intended == "gemini" and os.getenv("GOOGLE_AI_API_KEY"):
@@ -126,12 +129,12 @@ def _to_strands_messages(history):
 
 
 async def get_response(agent_name: str, message: str, history=None, max_tokens: int = 1024,
-                       force_model: str = None):
-    """Async: return (text, effective_model_id)."""
+                       force_model: str = None, codex_complex: bool = False):
+    """Async: return (text, effective_model_id). codex_complex=True -> gpt-5.5 for builder, else gpt-4o."""
     if agent_name not in SOULS:
         agent_name = "hermes-core"
     base_model = force_model or choose_model(agent_name, message, max_tokens)
-    model, eff = _build_model(agent_name, base_model, max_tokens, force_model)
+    model, eff = _build_model(agent_name, base_model, max_tokens, force_model, codex_complex)
     try:
         agent = Agent(model=model, system_prompt=SOULS[agent_name],
                       messages=_to_strands_messages(history), callback_handler=None)
@@ -139,7 +142,7 @@ async def get_response(agent_name: str, message: str, history=None, max_tokens: 
     except MaxTokensReachedException:
         # response was truncated by max_tokens -> retry once with generous headroom
         big = max(max_tokens * 3, 6000)
-        model2, eff = _build_model(agent_name, base_model, big, force_model)
+        model2, eff = _build_model(agent_name, base_model, big, force_model, codex_complex)
         agent = Agent(model=model2, system_prompt=SOULS[agent_name], callback_handler=None)
         result = await agent.invoke_async(message)
     except Exception:
