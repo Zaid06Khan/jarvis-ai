@@ -2,6 +2,7 @@
 
 # secrets / credentials
 .env
+.env.local
 .env.*
 *.pem
 *.key
@@ -10,10 +11,18 @@ id_rsa*
 id_ed25519*
 *credentials*.json
 .ssh/
+!**/.env.example
 
 # personal Claude Code config (leaks VPS IP/SSH access patterns)
 .claude/settings.local.json
 
-# python bytecode
+# python
+venv/
 __pycache__/
 *.pyc
+
+# misc
+.DS_Store
+node_modules/
+chroma-data/
+*.log

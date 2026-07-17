@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 160 30% 4%;
+    --foreground: 150 10% 92%;
+    --card: 162 26% 7%;
+    --card-foreground: 150 10% 92%;
+    --popover: 162 30% 6%;
+    --popover-foreground: 150 10% 92%;
+    --primary: 142 71% 45%;
+    --primary-foreground: 144 80% 5%;
+    --secondary: 160 14% 13%;
+    --secondary-foreground: 150 10% 92%;
+    --muted: 160 14% 12%;
+    --muted-foreground: 150 8% 58%;
+    --accent: 160 16% 16%;
+    --accent-foreground: 150 10% 95%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --border: 160 14% 14%;
+    --input: 160 14% 16%;
+    --ring: 142 71% 45%;
+    --radius: 0.75rem;
+    --chart-1: 142 71% 45%;
+    --chart-2: 168 70% 42%;
+    --chart-3: 199 89% 48%;
+    --chart-4: 47 95% 55%;
+    --chart-5: 280 65% 60%;
+  }
+  .dark {
+    --background: 160 30% 4%;
+    --foreground: 150 10% 92%;
+    --card: 162 26% 7%;
+    --card-foreground: 150 10% 92%;
+    --popover: 162 30% 6%;
+    --popover-foreground: 150 10% 92%;
+    --primary: 142 71% 45%;
+    --primary-foreground: 144 80% 5%;
+    --secondary: 160 14% 13%;
+    --secondary-foreground: 150 10% 92%;
+    --muted: 160 14% 12%;
+    --muted-foreground: 150 8% 58%;
+    --accent: 160 16% 16%;
+    --accent-foreground: 150 10% 95%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 160 14% 14%;
+    --input: 160 14% 16%;
+    --ring: 142 71% 45%;
+    --chart-1: 142 71% 45%;
+    --chart-2: 168 70% 42%;
+    --chart-3: 199 89% 48%;
+    --chart-4: 47 95% 55%;
+    --chart-5: 280 65% 60%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+  html { scroll-behavior: smooth; }
+}
+
+/* Jarvis flourishes */
+.jarvis-grid-bg {
+  background-image: radial-gradient(circle at 1px 1px, hsl(142 71% 45% / 0.06) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+.glass {
+  background: linear-gradient(180deg, hsl(162 26% 9% / 0.8), hsl(162 26% 6% / 0.8));
+  backdrop-filter: blur(8px);
+}
+.glow {
+  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.12), 0 8px 30px -12px hsl(142 71% 45% / 0.25);
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 hsl(142 71% 45% / 0.5); }
+  70% { box-shadow: 0 0 0 6px hsl(142 71% 45% / 0); }
+  100% { box-shadow: 0 0 0 0 hsl(142 71% 45% / 0); }
+}
+.pulse-dot { animation: pulse-ring 2s infinite; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: hsl(160 14% 18%); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
