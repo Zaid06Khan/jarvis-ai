@@ -1,0 +1,36 @@
+{
+  "updated": "2026-06-21",
+  "owners": {
+    "claude-code": "VPS, agent fleet, FastAPI router, architecture, integrations, infra",
+    "codex": "UI, boilerplate, fast/local code generation"
+  },
+  "vps": {
+    "host": "159.203.3.38",
+    "ssh": "ssh deploy@159.203.3.38 -p 2222 (key auth only; ~/.ssh/config alias set)",
+    "code_root": "/opt/edvisingu",
+    "status": "all services verified running 2026-06-21"
+  },
+  "tasks": [
+    {
+      "id": "tiktok-pipeline",
+      "title": "TikTok automation pipeline for @BuildingWithAI",
+      "owner": "claude-code",
+      "status": "planned",
+      "blocked_on": "operator scope decisions",
+      "decisions_needed": [
+        "video format: faceless voiceover+visuals | HeyGen avatar | agent-decides",
+        "approval flow: Discord approval before post (recommended) | fully autonomous | draft-only",
+        "first build: one end-to-end test video (recommended) | full scheduled pipeline",
+        "topic source: hermes-research auto-pick | operator queue | fixed calendar"
+      ],
+      "chain": "hermes-tiktok script -> HeyGen video -> Blotato post -> n8n schedule -> Discord approval",
+      "keys_ready": ["HEYGEN_API_KEY", "BLOTATO_API_KEY", "ELEVENLABS_API_KEY", "OPENAI_API_KEY"],
+      "existing_pieces": [
+        "agents/fleet.py: hermes-tiktok agent (scripts)",
+        "/content/factory endpoint + workflows/content-factory.json",
+        "hermes-image (DALL-E 3) for thumbnails"
+      ],
+      "notes": "No pipeline code written yet. This is a wiring job, not a from-scratch build."
+    }
+  ]
+}

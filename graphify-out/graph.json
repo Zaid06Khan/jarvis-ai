@@ -1,0 +1,4984 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "settings.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L1",
+      "id": "claude_settings_json",
+      "community": 20,
+      "norm_label": "settings.json"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "id": "claude_settings_hooks",
+      "community": 20,
+      "norm_label": "hooks"
+    },
+    {
+      "label": "PreToolUse",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "id": "claude_settings_hooks_pretooluse",
+      "community": 20,
+      "norm_label": "pretooluse"
+    },
+    {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "id": "claude_settings_local_json",
+      "community": 3,
+      "norm_label": "settings.local.json"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "id": "claude_settings_local_permissions",
+      "community": 3,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "id": "claude_settings_local_permissions_allow",
+      "community": 3,
+      "norm_label": "allow"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L19",
+      "id": "claude_settings_local_hooks",
+      "community": 3,
+      "norm_label": "hooks"
+    },
+    {
+      "label": "PostToolUse",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L20",
+      "id": "claude_settings_local_hooks_posttooluse",
+      "community": 3,
+      "norm_label": "posttooluse"
+    },
+    {
+      "label": "tasks.json",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L1",
+      "id": "codex_tasks_json",
+      "community": 7,
+      "norm_label": "tasks.json"
+    },
+    {
+      "label": "updated",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L2",
+      "id": "codex_tasks_updated",
+      "community": 7,
+      "norm_label": "updated"
+    },
+    {
+      "label": "owners",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L3",
+      "id": "codex_tasks_owners",
+      "community": 7,
+      "norm_label": "owners"
+    },
+    {
+      "label": "claude-code",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L4",
+      "id": "codex_tasks_owners_claude_code",
+      "community": 7,
+      "norm_label": "claude-code"
+    },
+    {
+      "label": "codex",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L5",
+      "id": "codex_tasks_owners_codex",
+      "community": 7,
+      "norm_label": "codex"
+    },
+    {
+      "label": "vps",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L7",
+      "id": "codex_tasks_vps",
+      "community": 7,
+      "norm_label": "vps"
+    },
+    {
+      "label": "host",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L8",
+      "id": "codex_tasks_vps_host",
+      "community": 7,
+      "norm_label": "host"
+    },
+    {
+      "label": "ssh",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L9",
+      "id": "codex_tasks_vps_ssh",
+      "community": 7,
+      "norm_label": "ssh"
+    },
+    {
+      "label": "code_root",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L10",
+      "id": "codex_tasks_vps_code_root",
+      "community": 7,
+      "norm_label": "code_root"
+    },
+    {
+      "label": "status",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L11",
+      "id": "codex_tasks_vps_status",
+      "community": 7,
+      "norm_label": "status"
+    },
+    {
+      "label": "tasks",
+      "file_type": "code",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L13",
+      "id": "codex_tasks_tasks",
+      "community": 7,
+      "norm_label": "tasks"
+    },
+    {
+      "label": "state.json",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L1",
+      "id": "handoff_state_json",
+      "community": 2,
+      "norm_label": "state.json"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L2",
+      "id": "handoff_state_version",
+      "community": 2,
+      "norm_label": "version"
+    },
+    {
+      "label": "session",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L3",
+      "id": "handoff_state_session",
+      "community": 2,
+      "norm_label": "session"
+    },
+    {
+      "label": "id",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L4",
+      "id": "handoff_state_session_id",
+      "community": 2,
+      "norm_label": "id"
+    },
+    {
+      "label": "status",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L5",
+      "id": "handoff_state_session_status",
+      "community": 2,
+      "norm_label": "status"
+    },
+    {
+      "label": "updated_at",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L6",
+      "id": "handoff_state_session_updated_at",
+      "community": 2,
+      "norm_label": "updated_at"
+    },
+    {
+      "label": "last_writer",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L7",
+      "id": "handoff_state_session_last_writer",
+      "community": 2,
+      "norm_label": "last_writer"
+    },
+    {
+      "label": "current_owner",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L8",
+      "id": "handoff_state_session_current_owner",
+      "community": 2,
+      "norm_label": "current_owner"
+    },
+    {
+      "label": "next_owner",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L9",
+      "id": "handoff_state_session_next_owner",
+      "community": 2,
+      "norm_label": "next_owner"
+    },
+    {
+      "label": "direction",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L10",
+      "id": "handoff_state_session_direction",
+      "community": 2,
+      "norm_label": "direction"
+    },
+    {
+      "label": "project",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L12",
+      "id": "handoff_state_project",
+      "community": 2,
+      "norm_label": "project"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L13",
+      "id": "handoff_state_project_name",
+      "community": 2,
+      "norm_label": "name"
+    },
+    {
+      "label": "repo_root",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L14",
+      "id": "handoff_state_project_repo_root",
+      "community": 2,
+      "norm_label": "repo_root"
+    },
+    {
+      "label": "coordination_layer",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L15",
+      "id": "handoff_state_project_coordination_layer",
+      "community": 2,
+      "norm_label": "coordination_layer"
+    },
+    {
+      "label": "shared_docs",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L16",
+      "id": "handoff_state_coordination_layer_shared_docs",
+      "community": 2,
+      "norm_label": "shared_docs"
+    },
+    {
+      "label": "summary",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L26",
+      "id": "handoff_state_summary",
+      "community": 2,
+      "norm_label": "summary"
+    },
+    {
+      "label": "objective",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L27",
+      "id": "handoff_state_summary_objective",
+      "community": 2,
+      "norm_label": "objective"
+    },
+    {
+      "label": "status",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L28",
+      "id": "handoff_state_summary_status",
+      "community": 2,
+      "norm_label": "status"
+    },
+    {
+      "label": "completed",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L29",
+      "id": "handoff_state_summary_completed",
+      "community": 2,
+      "norm_label": "completed"
+    },
+    {
+      "label": "next_actions",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L34",
+      "id": "handoff_state_summary_next_actions",
+      "community": 2,
+      "norm_label": "next_actions"
+    },
+    {
+      "label": "decisions",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L45",
+      "id": "handoff_state_decisions",
+      "community": 2,
+      "norm_label": "decisions"
+    },
+    {
+      "label": "blockers",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L49",
+      "id": "handoff_state_blockers",
+      "community": 2,
+      "norm_label": "blockers"
+    },
+    {
+      "label": "open_questions",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L50",
+      "id": "handoff_state_open_questions",
+      "community": 2,
+      "norm_label": "open_questions"
+    },
+    {
+      "label": "history",
+      "file_type": "code",
+      "source_file": "handoff/state.json",
+      "source_location": "L51",
+      "id": "handoff_state_history",
+      "community": 2,
+      "norm_label": "history"
+    },
+    {
+      "label": "sync_handoff.ps1",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.ps1",
+      "source_location": "L1",
+      "id": "scripts_sync_handoff_ps1",
+      "community": 23,
+      "norm_label": "sync_handoff.ps1"
+    },
+    {
+      "label": "sync_handoff.py",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L1",
+      "id": "scripts_sync_handoff_py",
+      "community": 6,
+      "norm_label": "sync_handoff.py"
+    },
+    {
+      "label": "load_state()",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L31",
+      "id": "scripts_sync_handoff_load_state",
+      "community": 6,
+      "norm_label": "load_state()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L31",
+      "id": "path",
+      "community": 6,
+      "norm_label": "path"
+    },
+    {
+      "label": "str",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L31",
+      "id": "str",
+      "community": 6,
+      "norm_label": "str"
+    },
+    {
+      "label": "Any",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L31",
+      "id": "any",
+      "community": 6,
+      "norm_label": "any"
+    },
+    {
+      "label": "ordered_state()",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L40",
+      "id": "scripts_sync_handoff_ordered_state",
+      "community": 6,
+      "norm_label": "ordered_state()"
+    },
+    {
+      "label": "render_list()",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L53",
+      "id": "scripts_sync_handoff_render_list",
+      "community": 6,
+      "norm_label": "render_list()"
+    },
+    {
+      "label": "render_next_actions()",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L64",
+      "id": "scripts_sync_handoff_render_next_actions",
+      "community": 6,
+      "norm_label": "render_next_actions()"
+    },
+    {
+      "label": "render_workflow()",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L76",
+      "id": "scripts_sync_handoff_render_workflow",
+      "community": 6,
+      "norm_label": "render_workflow()"
+    },
+    {
+      "label": "write_if_changed()",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L182",
+      "id": "scripts_sync_handoff_write_if_changed",
+      "community": 6,
+      "norm_label": "write_if_changed()"
+    },
+    {
+      "label": "bool",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L182",
+      "id": "bool",
+      "community": 6,
+      "norm_label": "bool"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L192",
+      "id": "scripts_sync_handoff_main",
+      "community": 6,
+      "norm_label": "main()"
+    },
+    {
+      "label": "int",
+      "file_type": "code",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L192",
+      "id": "int",
+      "community": 6,
+      "norm_label": "int"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "id": "agents_md",
+      "community": 4,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "Project Jarvis \u2014 EdVisingU AI Operating System",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "id": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "community": 4,
+      "norm_label": "project jarvis \u2014 edvisingu ai operating system"
+    },
+    {
+      "label": "What We Are Building",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L3",
+      "id": "jarvis_agents_what_we_are_building",
+      "community": 4,
+      "norm_label": "what we are building"
+    },
+    {
+      "label": "My Stack",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L8",
+      "id": "jarvis_agents_my_stack",
+      "community": 4,
+      "norm_label": "my stack"
+    },
+    {
+      "label": "My Accounts",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L22",
+      "id": "jarvis_agents_my_accounts",
+      "community": 4,
+      "norm_label": "my accounts"
+    },
+    {
+      "label": "What Jarvis Does For Me",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L30",
+      "id": "jarvis_agents_what_jarvis_does_for_me",
+      "community": 4,
+      "norm_label": "what jarvis does for me"
+    },
+    {
+      "label": "Existing Work (Do Not Rebuild)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L38",
+      "id": "jarvis_agents_existing_work_do_not_rebuild",
+      "community": 4,
+      "norm_label": "existing work (do not rebuild)"
+    },
+    {
+      "label": "Build Order (Follow This Exactly)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L46",
+      "id": "jarvis_agents_build_order_follow_this_exactly",
+      "community": 4,
+      "norm_label": "build order (follow this exactly)"
+    },
+    {
+      "label": "Security Rules (Non-Negotiable)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L58",
+      "id": "jarvis_agents_security_rules_non_negotiable",
+      "community": 4,
+      "norm_label": "security rules (non-negotiable)"
+    },
+    {
+      "label": "Git Workflow",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L65",
+      "id": "jarvis_agents_git_workflow",
+      "community": 4,
+      "norm_label": "git workflow"
+    },
+    {
+      "label": "IDE",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L72",
+      "id": "jarvis_agents_ide",
+      "community": 4,
+      "norm_label": "ide"
+    },
+    {
+      "label": "Do Not",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L77",
+      "id": "jarvis_agents_do_not",
+      "community": 4,
+      "norm_label": "do not"
+    },
+    {
+      "label": "Current Status (updated 2026-06-21)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L84",
+      "id": "jarvis_agents_current_status_updated_2026_06_21",
+      "community": 4,
+      "norm_label": "current status (updated 2026-06-21)"
+    },
+    {
+      "label": "Live Infrastructure",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L87",
+      "id": "jarvis_agents_live_infrastructure",
+      "community": 4,
+      "norm_label": "live infrastructure"
+    },
+    {
+      "label": "Running on the VPS (per operator, last asserted 2026-06-21)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L93",
+      "id": "jarvis_agents_running_on_the_vps_per_operator_last_asserted_2026_06_21",
+      "community": 4,
+      "norm_label": "running on the vps (per operator, last asserted 2026-06-21)"
+    },
+    {
+      "label": "How to connect",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L105",
+      "id": "jarvis_agents_how_to_connect",
+      "community": 4,
+      "norm_label": "how to connect"
+    },
+    {
+      "label": "\u26a0\ufe0f Open blocker (2026-06-21)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L108",
+      "id": "jarvis_agents_open_blocker_2026_06_21",
+      "community": 4,
+      "norm_label": "\u26a0\ufe0f open blocker (2026-06-21)"
+    },
+    {
+      "label": "Active work",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L115",
+      "id": "jarvis_agents_active_work",
+      "community": 4,
+      "norm_label": "active work"
+    },
+    {
+      "label": "Next build phases (the original 10-step build order below is COMPLETE through ~phase 9)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L118",
+      "id": "jarvis_agents_next_build_phases_the_original_10_step_build_order_below_is_complete_through_phase_9",
+      "community": 4,
+      "norm_label": "next build phases (the original 10-step build order below is complete through ~phase 9)"
+    },
+    {
+      "label": "Session Handoff",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L120",
+      "id": "jarvis_agents_session_handoff",
+      "community": 4,
+      "norm_label": "session handoff"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude_md",
+      "community": 5,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "Project Jarvis \u2014 EdVisingU AI Operating System",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "community": 5,
+      "norm_label": "project jarvis \u2014 edvisingu ai operating system"
+    },
+    {
+      "label": "What We Are Building",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
+      "id": "jarvis_claude_what_we_are_building",
+      "community": 5,
+      "norm_label": "what we are building"
+    },
+    {
+      "label": "My Stack",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L8",
+      "id": "jarvis_claude_my_stack",
+      "community": 5,
+      "norm_label": "my stack"
+    },
+    {
+      "label": "My Accounts",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L22",
+      "id": "jarvis_claude_my_accounts",
+      "community": 5,
+      "norm_label": "my accounts"
+    },
+    {
+      "label": "What Jarvis Does For Me",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L30",
+      "id": "jarvis_claude_what_jarvis_does_for_me",
+      "community": 5,
+      "norm_label": "what jarvis does for me"
+    },
+    {
+      "label": "Existing Work (Do Not Rebuild)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L38",
+      "id": "jarvis_claude_existing_work_do_not_rebuild",
+      "community": 5,
+      "norm_label": "existing work (do not rebuild)"
+    },
+    {
+      "label": "Build Order (Follow This Exactly)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L46",
+      "id": "jarvis_claude_build_order_follow_this_exactly",
+      "community": 5,
+      "norm_label": "build order (follow this exactly)"
+    },
+    {
+      "label": "Security Rules (Non-Negotiable)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L58",
+      "id": "jarvis_claude_security_rules_non_negotiable",
+      "community": 5,
+      "norm_label": "security rules (non-negotiable)"
+    },
+    {
+      "label": "Git Workflow",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L65",
+      "id": "jarvis_claude_git_workflow",
+      "community": 5,
+      "norm_label": "git workflow"
+    },
+    {
+      "label": "IDE",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L72",
+      "id": "jarvis_claude_ide",
+      "community": 5,
+      "norm_label": "ide"
+    },
+    {
+      "label": "Do Not",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L77",
+      "id": "jarvis_claude_do_not",
+      "community": 5,
+      "norm_label": "do not"
+    },
+    {
+      "label": "Current Status (updated 2026-06-21)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L84",
+      "id": "jarvis_claude_current_status_updated_2026_06_21",
+      "community": 9,
+      "norm_label": "current status (updated 2026-06-21)"
+    },
+    {
+      "label": "Live Infrastructure",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L87",
+      "id": "jarvis_claude_live_infrastructure",
+      "community": 9,
+      "norm_label": "live infrastructure"
+    },
+    {
+      "label": "Running on the VPS (VERIFIED 2026-06-21 via SSH)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L93",
+      "id": "jarvis_claude_running_on_the_vps_verified_2026_06_21_via_ssh",
+      "community": 9,
+      "norm_label": "running on the vps (verified 2026-06-21 via ssh)"
+    },
+    {
+      "label": "How to connect  \u26a0\ufe0f PORT 2222 + USER deploy (NOT root / NOT port 22)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L119",
+      "id": "jarvis_claude_how_to_connect_port_2222_user_deploy_not_root_not_port_22",
+      "community": 9,
+      "norm_label": "how to connect  \u26a0\ufe0f port 2222 + user deploy (not root / not port 22)"
+    },
+    {
+      "label": "\u2705 SSH access (RESOLVED 2026-06-21)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L124",
+      "id": "jarvis_claude_ssh_access_resolved_2026_06_21",
+      "community": 9,
+      "norm_label": "\u2705 ssh access (resolved 2026-06-21)"
+    },
+    {
+      "label": "Active work",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L128",
+      "id": "jarvis_claude_active_work",
+      "community": 9,
+      "norm_label": "active work"
+    },
+    {
+      "label": "Build progress",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L133",
+      "id": "jarvis_claude_build_progress",
+      "community": 9,
+      "norm_label": "build progress"
+    },
+    {
+      "label": "Session log \u2014 2026-06-21",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L137",
+      "id": "jarvis_claude_session_log_2026_06_21",
+      "community": 9,
+      "norm_label": "session log \u2014 2026-06-21"
+    },
+    {
+      "label": "Claude Code \u2194 Codex division of work",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L150",
+      "id": "jarvis_claude_claude_code_codex_division_of_work",
+      "community": 9,
+      "norm_label": "claude code \u2194 codex division of work"
+    },
+    {
+      "label": "Next build phases",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L157",
+      "id": "jarvis_claude_next_build_phases",
+      "community": 9,
+      "norm_label": "next build phases"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L159",
+      "id": "jarvis_claude_graphify",
+      "community": 5,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "TWO graphs \u2014 query the right one",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L169",
+      "id": "jarvis_claude_two_graphs_query_the_right_one",
+      "community": 5,
+      "norm_label": "two graphs \u2014 query the right one"
+    },
+    {
+      "label": "Session Handoff",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L179",
+      "id": "jarvis_claude_session_handoff",
+      "community": 5,
+      "norm_label": "session handoff"
+    },
+    {
+      "label": "bridge.md",
+      "file_type": "document",
+      "source_file": ".codex/bridge.md",
+      "source_location": "L1",
+      "id": "codex_bridge_md",
+      "community": 1,
+      "norm_label": "bridge.md"
+    },
+    {
+      "label": "Claude to Codex Bridge",
+      "file_type": "document",
+      "source_file": ".codex/bridge.md",
+      "source_location": "L1",
+      "id": "codex_bridge_claude_to_codex_bridge",
+      "community": 1,
+      "norm_label": "claude to codex bridge"
+    },
+    {
+      "label": "Mapping",
+      "file_type": "document",
+      "source_file": ".codex/bridge.md",
+      "source_location": "L5",
+      "id": "codex_bridge_mapping",
+      "community": 1,
+      "norm_label": "mapping"
+    },
+    {
+      "label": "Operating rule",
+      "file_type": "document",
+      "source_file": ".codex/bridge.md",
+      "source_location": "L15",
+      "id": "codex_bridge_operating_rule",
+      "community": 1,
+      "norm_label": "operating rule"
+    },
+    {
+      "label": "handoff.md",
+      "file_type": "document",
+      "source_file": ".codex/handoff.md",
+      "source_location": "L1",
+      "id": "codex_handoff_md",
+      "community": 21,
+      "norm_label": "handoff.md"
+    },
+    {
+      "label": "Session Handoff \u2014 2026-06-21",
+      "file_type": "document",
+      "source_file": ".codex/handoff.md",
+      "source_location": "L1",
+      "id": "codex_handoff_session_handoff_2026_06_21",
+      "community": 21,
+      "norm_label": "session handoff \u2014 2026-06-21"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": ".codex/README.md",
+      "source_location": "L1",
+      "id": "codex_readme_md",
+      "community": 1,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Codex Bridge",
+      "file_type": "document",
+      "source_file": ".codex/README.md",
+      "source_location": "L1",
+      "id": "codex_readme_codex_bridge",
+      "community": 1,
+      "norm_label": "codex bridge"
+    },
+    {
+      "label": "safety.md",
+      "file_type": "document",
+      "source_file": ".codex/safety.md",
+      "source_location": "L1",
+      "id": "codex_safety_md",
+      "community": 1,
+      "norm_label": "safety.md"
+    },
+    {
+      "label": "Safety Rules",
+      "file_type": "document",
+      "source_file": ".codex/safety.md",
+      "source_location": "L1",
+      "id": "codex_safety_safety_rules",
+      "community": 1,
+      "norm_label": "safety rules"
+    },
+    {
+      "label": "claude-settings.md",
+      "file_type": "document",
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "L1",
+      "id": "codex_reference_claude_settings_md",
+      "community": 1,
+      "norm_label": "claude-settings.md"
+    },
+    {
+      "label": "Sanitized Claude Settings Summary",
+      "file_type": "document",
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "L1",
+      "id": "reference_claude_settings_sanitized_claude_settings_summary",
+      "community": 1,
+      "norm_label": "sanitized claude settings summary"
+    },
+    {
+      "label": "Permission summary",
+      "file_type": "document",
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "L8",
+      "id": "reference_claude_settings_permission_summary",
+      "community": 1,
+      "norm_label": "permission summary"
+    },
+    {
+      "label": "Hook summary",
+      "file_type": "document",
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "L15",
+      "id": "reference_claude_settings_hook_summary",
+      "community": 1,
+      "norm_label": "hook summary"
+    },
+    {
+      "label": "Practical note",
+      "file_type": "document",
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "L22",
+      "id": "reference_claude_settings_practical_note",
+      "community": 1,
+      "norm_label": "practical note"
+    },
+    {
+      "label": "content-factory.md",
+      "file_type": "document",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L1",
+      "id": "agents_content_factory_md",
+      "community": 0,
+      "norm_label": "content-factory.md"
+    },
+    {
+      "label": "Content Factory",
+      "file_type": "document",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L1",
+      "id": "agents_content_factory_content_factory",
+      "community": 11,
+      "norm_label": "content factory"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L3",
+      "id": "agents_content_factory_purpose",
+      "community": 11,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L7",
+      "id": "agents_content_factory_responsibilities",
+      "community": 11,
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Inputs",
+      "file_type": "document",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L13",
+      "id": "agents_content_factory_inputs",
+      "community": 11,
+      "norm_label": "inputs"
+    },
+    {
+      "label": "Outputs",
+      "file_type": "document",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L19",
+      "id": "agents_content_factory_outputs",
+      "community": 11,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L25",
+      "id": "agents_content_factory_dependencies",
+      "community": 11,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Safety",
+      "file_type": "document",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L31",
+      "id": "agents_content_factory_safety",
+      "community": 11,
+      "norm_label": "safety"
+    },
+    {
+      "label": "hermes.md",
+      "file_type": "document",
+      "source_file": "agents/hermes.md",
+      "source_location": "L1",
+      "id": "agents_hermes_md",
+      "community": 0,
+      "norm_label": "hermes.md"
+    },
+    {
+      "label": "Hermes Gateway",
+      "file_type": "document",
+      "source_file": "agents/hermes.md",
+      "source_location": "L1",
+      "id": "agents_hermes_hermes_gateway",
+      "community": 12,
+      "norm_label": "hermes gateway"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "agents/hermes.md",
+      "source_location": "L3",
+      "id": "agents_hermes_purpose",
+      "community": 12,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "agents/hermes.md",
+      "source_location": "L7",
+      "id": "agents_hermes_responsibilities",
+      "community": 12,
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Inputs",
+      "file_type": "document",
+      "source_file": "agents/hermes.md",
+      "source_location": "L13",
+      "id": "agents_hermes_inputs",
+      "community": 12,
+      "norm_label": "inputs"
+    },
+    {
+      "label": "Outputs",
+      "file_type": "document",
+      "source_file": "agents/hermes.md",
+      "source_location": "L19",
+      "id": "agents_hermes_outputs",
+      "community": 12,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "agents/hermes.md",
+      "source_location": "L25",
+      "id": "agents_hermes_dependencies",
+      "community": 12,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Safety",
+      "file_type": "document",
+      "source_file": "agents/hermes.md",
+      "source_location": "L31",
+      "id": "agents_hermes_safety",
+      "community": 12,
+      "norm_label": "safety"
+    },
+    {
+      "label": "infra.md",
+      "file_type": "document",
+      "source_file": "agents/infra.md",
+      "source_location": "L1",
+      "id": "agents_infra_md",
+      "community": 0,
+      "norm_label": "infra.md"
+    },
+    {
+      "label": "Infra",
+      "file_type": "document",
+      "source_file": "agents/infra.md",
+      "source_location": "L1",
+      "id": "agents_infra_infra",
+      "community": 13,
+      "norm_label": "infra"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "agents/infra.md",
+      "source_location": "L3",
+      "id": "agents_infra_purpose",
+      "community": 13,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "agents/infra.md",
+      "source_location": "L7",
+      "id": "agents_infra_responsibilities",
+      "community": 13,
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Inputs",
+      "file_type": "document",
+      "source_file": "agents/infra.md",
+      "source_location": "L14",
+      "id": "agents_infra_inputs",
+      "community": 13,
+      "norm_label": "inputs"
+    },
+    {
+      "label": "Outputs",
+      "file_type": "document",
+      "source_file": "agents/infra.md",
+      "source_location": "L20",
+      "id": "agents_infra_outputs",
+      "community": 13,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "agents/infra.md",
+      "source_location": "L26",
+      "id": "agents_infra_dependencies",
+      "community": 13,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Safety",
+      "file_type": "document",
+      "source_file": "agents/infra.md",
+      "source_location": "L32",
+      "id": "agents_infra_safety",
+      "community": 13,
+      "norm_label": "safety"
+    },
+    {
+      "label": "n8n.md",
+      "file_type": "document",
+      "source_file": "agents/n8n.md",
+      "source_location": "L1",
+      "id": "agents_n8n_md",
+      "community": 10,
+      "norm_label": "n8n.md"
+    },
+    {
+      "label": "n8n",
+      "file_type": "document",
+      "source_file": "agents/n8n.md",
+      "source_location": "L1",
+      "id": "agents_n8n_n8n",
+      "community": 10,
+      "norm_label": "n8n"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "agents/n8n.md",
+      "source_location": "L3",
+      "id": "agents_n8n_purpose",
+      "community": 10,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "agents/n8n.md",
+      "source_location": "L7",
+      "id": "agents_n8n_responsibilities",
+      "community": 10,
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Inputs",
+      "file_type": "document",
+      "source_file": "agents/n8n.md",
+      "source_location": "L13",
+      "id": "agents_n8n_inputs",
+      "community": 10,
+      "norm_label": "inputs"
+    },
+    {
+      "label": "Outputs",
+      "file_type": "document",
+      "source_file": "agents/n8n.md",
+      "source_location": "L19",
+      "id": "agents_n8n_outputs",
+      "community": 10,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "agents/n8n.md",
+      "source_location": "L25",
+      "id": "agents_n8n_dependencies",
+      "community": 10,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Safety",
+      "file_type": "document",
+      "source_file": "agents/n8n.md",
+      "source_location": "L31",
+      "id": "agents_n8n_safety",
+      "community": 10,
+      "norm_label": "safety"
+    },
+    {
+      "label": "orchestrator.md",
+      "file_type": "document",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L1",
+      "id": "agents_orchestrator_md",
+      "community": 0,
+      "norm_label": "orchestrator.md"
+    },
+    {
+      "label": "Orchestrator",
+      "file_type": "document",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L1",
+      "id": "agents_orchestrator_orchestrator",
+      "community": 14,
+      "norm_label": "orchestrator"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L3",
+      "id": "agents_orchestrator_purpose",
+      "community": 14,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L7",
+      "id": "agents_orchestrator_responsibilities",
+      "community": 14,
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Inputs",
+      "file_type": "document",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L14",
+      "id": "agents_orchestrator_inputs",
+      "community": 14,
+      "norm_label": "inputs"
+    },
+    {
+      "label": "Outputs",
+      "file_type": "document",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L20",
+      "id": "agents_orchestrator_outputs",
+      "community": 14,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L26",
+      "id": "agents_orchestrator_dependencies",
+      "community": 14,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Safety",
+      "file_type": "document",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L31",
+      "id": "agents_orchestrator_safety",
+      "community": 14,
+      "norm_label": "safety"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "agents/README.md",
+      "source_location": "L1",
+      "id": "agents_readme_md",
+      "community": 0,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Agent Roles",
+      "file_type": "document",
+      "source_file": "agents/README.md",
+      "source_location": "L1",
+      "id": "agents_readme_agent_roles",
+      "community": 0,
+      "norm_label": "agent roles"
+    },
+    {
+      "label": "Role Index",
+      "file_type": "document",
+      "source_file": "agents/README.md",
+      "source_location": "L21",
+      "id": "agents_readme_role_index",
+      "community": 0,
+      "norm_label": "role index"
+    },
+    {
+      "label": "receptionist.md",
+      "file_type": "document",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L1",
+      "id": "agents_receptionist_md",
+      "community": 0,
+      "norm_label": "receptionist.md"
+    },
+    {
+      "label": "Receptionist",
+      "file_type": "document",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L1",
+      "id": "agents_receptionist_receptionist",
+      "community": 15,
+      "norm_label": "receptionist"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L3",
+      "id": "agents_receptionist_purpose",
+      "community": 15,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L7",
+      "id": "agents_receptionist_responsibilities",
+      "community": 15,
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Inputs",
+      "file_type": "document",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L13",
+      "id": "agents_receptionist_inputs",
+      "community": 15,
+      "norm_label": "inputs"
+    },
+    {
+      "label": "Outputs",
+      "file_type": "document",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L19",
+      "id": "agents_receptionist_outputs",
+      "community": 15,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L25",
+      "id": "agents_receptionist_dependencies",
+      "community": 15,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Safety",
+      "file_type": "document",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L31",
+      "id": "agents_receptionist_safety",
+      "community": 15,
+      "norm_label": "safety"
+    },
+    {
+      "label": "research.md",
+      "file_type": "document",
+      "source_file": "agents/research.md",
+      "source_location": "L1",
+      "id": "agents_research_md",
+      "community": 0,
+      "norm_label": "research.md"
+    },
+    {
+      "label": "Research",
+      "file_type": "document",
+      "source_file": "agents/research.md",
+      "source_location": "L1",
+      "id": "agents_research_research",
+      "community": 16,
+      "norm_label": "research"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "agents/research.md",
+      "source_location": "L3",
+      "id": "agents_research_purpose",
+      "community": 16,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "agents/research.md",
+      "source_location": "L8",
+      "id": "agents_research_responsibilities",
+      "community": 16,
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Inputs",
+      "file_type": "document",
+      "source_file": "agents/research.md",
+      "source_location": "L14",
+      "id": "agents_research_inputs",
+      "community": 16,
+      "norm_label": "inputs"
+    },
+    {
+      "label": "Outputs",
+      "file_type": "document",
+      "source_file": "agents/research.md",
+      "source_location": "L20",
+      "id": "agents_research_outputs",
+      "community": 16,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "agents/research.md",
+      "source_location": "L26",
+      "id": "agents_research_dependencies",
+      "community": 16,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Safety",
+      "file_type": "document",
+      "source_file": "agents/research.md",
+      "source_location": "L32",
+      "id": "agents_research_safety",
+      "community": 16,
+      "norm_label": "safety"
+    },
+    {
+      "label": "router-fastapi.md",
+      "file_type": "document",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L1",
+      "id": "agents_router_fastapi_md",
+      "community": 0,
+      "norm_label": "router-fastapi.md"
+    },
+    {
+      "label": "FastAPI Router",
+      "file_type": "document",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L1",
+      "id": "agents_router_fastapi_fastapi_router",
+      "community": 17,
+      "norm_label": "fastapi router"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L3",
+      "id": "agents_router_fastapi_purpose",
+      "community": 17,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L7",
+      "id": "agents_router_fastapi_responsibilities",
+      "community": 17,
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Inputs",
+      "file_type": "document",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L13",
+      "id": "agents_router_fastapi_inputs",
+      "community": 17,
+      "norm_label": "inputs"
+    },
+    {
+      "label": "Outputs",
+      "file_type": "document",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L19",
+      "id": "agents_router_fastapi_outputs",
+      "community": 17,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L25",
+      "id": "agents_router_fastapi_dependencies",
+      "community": 17,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Safety",
+      "file_type": "document",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L30",
+      "id": "agents_router_fastapi_safety",
+      "community": 17,
+      "norm_label": "safety"
+    },
+    {
+      "label": "social-media.md",
+      "file_type": "document",
+      "source_file": "agents/social-media.md",
+      "source_location": "L1",
+      "id": "agents_social_media_md",
+      "community": 0,
+      "norm_label": "social-media.md"
+    },
+    {
+      "label": "Social Media",
+      "file_type": "document",
+      "source_file": "agents/social-media.md",
+      "source_location": "L1",
+      "id": "agents_social_media_social_media",
+      "community": 18,
+      "norm_label": "social media"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "agents/social-media.md",
+      "source_location": "L3",
+      "id": "agents_social_media_purpose",
+      "community": 18,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "agents/social-media.md",
+      "source_location": "L7",
+      "id": "agents_social_media_responsibilities",
+      "community": 18,
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Inputs",
+      "file_type": "document",
+      "source_file": "agents/social-media.md",
+      "source_location": "L13",
+      "id": "agents_social_media_inputs",
+      "community": 18,
+      "norm_label": "inputs"
+    },
+    {
+      "label": "Outputs",
+      "file_type": "document",
+      "source_file": "agents/social-media.md",
+      "source_location": "L19",
+      "id": "agents_social_media_outputs",
+      "community": 18,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "agents/social-media.md",
+      "source_location": "L25",
+      "id": "agents_social_media_dependencies",
+      "community": 18,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Safety",
+      "file_type": "document",
+      "source_file": "agents/social-media.md",
+      "source_location": "L31",
+      "id": "agents_social_media_safety",
+      "community": 18,
+      "norm_label": "safety"
+    },
+    {
+      "label": "supabase-memory.md",
+      "file_type": "document",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L1",
+      "id": "agents_supabase_memory_md",
+      "community": 0,
+      "norm_label": "supabase-memory.md"
+    },
+    {
+      "label": "Supabase Memory",
+      "file_type": "document",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L1",
+      "id": "agents_supabase_memory_supabase_memory",
+      "community": 19,
+      "norm_label": "supabase memory"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L3",
+      "id": "agents_supabase_memory_purpose",
+      "community": 19,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L7",
+      "id": "agents_supabase_memory_responsibilities",
+      "community": 19,
+      "norm_label": "responsibilities"
+    },
+    {
+      "label": "Inputs",
+      "file_type": "document",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L13",
+      "id": "agents_supabase_memory_inputs",
+      "community": 19,
+      "norm_label": "inputs"
+    },
+    {
+      "label": "Outputs",
+      "file_type": "document",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L19",
+      "id": "agents_supabase_memory_outputs",
+      "community": 19,
+      "norm_label": "outputs"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L25",
+      "id": "agents_supabase_memory_dependencies",
+      "community": 19,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Safety",
+      "file_type": "document",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L30",
+      "id": "agents_supabase_memory_safety",
+      "community": 19,
+      "norm_label": "safety"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "handoff/README.md",
+      "source_location": "L1",
+      "id": "handoff_readme_md",
+      "community": 22,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Handoff",
+      "file_type": "document",
+      "source_file": "handoff/README.md",
+      "source_location": "L1",
+      "id": "handoff_readme_handoff",
+      "community": 22,
+      "norm_label": "handoff"
+    },
+    {
+      "label": "WORKFLOW.md",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L1",
+      "id": "handoff_workflow_md",
+      "community": 8,
+      "norm_label": "workflow.md"
+    },
+    {
+      "label": "Handoff Workflow",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L1",
+      "id": "handoff_workflow_handoff_workflow",
+      "community": 8,
+      "norm_label": "handoff workflow"
+    },
+    {
+      "label": "Update Order",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L5",
+      "id": "handoff_workflow_update_order",
+      "community": 8,
+      "norm_label": "update order"
+    },
+    {
+      "label": "Current Context",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L13",
+      "id": "handoff_workflow_current_context",
+      "community": 8,
+      "norm_label": "current context"
+    },
+    {
+      "label": "Current Ownership",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L22",
+      "id": "handoff_workflow_current_ownership",
+      "community": 8,
+      "norm_label": "current ownership"
+    },
+    {
+      "label": "Completed",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L29",
+      "id": "handoff_workflow_completed",
+      "community": 8,
+      "norm_label": "completed"
+    },
+    {
+      "label": "Open Work",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L35",
+      "id": "handoff_workflow_open_work",
+      "community": 8,
+      "norm_label": "open work"
+    },
+    {
+      "label": "Decisions",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L40",
+      "id": "handoff_workflow_decisions",
+      "community": 8,
+      "norm_label": "decisions"
+    },
+    {
+      "label": "Blockers",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L45",
+      "id": "handoff_workflow_blockers",
+      "community": 8,
+      "norm_label": "blockers"
+    },
+    {
+      "label": "Open Questions",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L49",
+      "id": "handoff_workflow_open_questions",
+      "community": 8,
+      "norm_label": "open questions"
+    },
+    {
+      "label": "Quick Inject",
+      "file_type": "document",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L53",
+      "id": "handoff_workflow_quick_inject",
+      "community": 8,
+      "norm_label": "quick inject"
+    },
+    {
+      "label": "Project Jarvis \u2014 EdVisingU AI Operating System (AGENTS.md)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Zaid06Khan",
+      "contributor": null,
+      "community": 0,
+      "norm_label": "project jarvis \u2014 edvisingu ai operating system (agents.md)",
+      "id": "agents_md_project_jarvis"
+    },
+    {
+      "label": "Project Jarvis \u2014 EdVisingU AI Operating System (CLAUDE.md)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Zaid06Khan",
+      "contributor": null,
+      "community": 0,
+      "norm_label": "project jarvis \u2014 edvisingu ai operating system (claude.md)",
+      "id": "claude_md_project_jarvis"
+    },
+    {
+      "label": "OpenJarvis Orchestrator",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "openjarvis orchestrator",
+      "id": "concept_openjarvis"
+    },
+    {
+      "label": "Hermes Agent (Telegram/Discord Gateway)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "hermes agent (telegram/discord gateway)",
+      "id": "concept_hermes_agent"
+    },
+    {
+      "label": "Strands Agents SDK",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "strands agents sdk",
+      "id": "concept_strands_agents_sdk"
+    },
+    {
+      "label": "FastAPI Specialist Agent Router (port 8000)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "fastapi specialist agent router (port 8000)",
+      "id": "concept_fastapi_router"
+    },
+    {
+      "label": "Supabase (jarvis-db)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "supabase (jarvis-db)",
+      "id": "concept_supabase"
+    },
+    {
+      "label": "n8n Workflow Automation",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "n8n workflow automation",
+      "id": "concept_n8n"
+    },
+    {
+      "label": "Docker Container Fleet",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "docker container fleet",
+      "id": "concept_docker"
+    },
+    {
+      "label": "Redis (Docker, port 6379)",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "redis (docker, port 6379)",
+      "id": "concept_redis"
+    },
+    {
+      "label": "DigitalOcean VPS (159.203.3.38, Ubuntu 22.04)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "digitalocean vps (159.203.3.38, ubuntu 22.04)",
+      "id": "concept_vps"
+    },
+    {
+      "label": "Claude Sonnet 4.6 (Primary Reasoning Model)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "claude sonnet 4.6 (primary reasoning model)",
+      "id": "concept_claude_sonnet"
+    },
+    {
+      "label": "OpenRouter (Fallback AI Model Access)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "openrouter (fallback ai model access)",
+      "id": "concept_openrouter"
+    },
+    {
+      "label": "Bitwarden Credential Storage",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "bitwarden credential storage",
+      "id": "concept_bitwarden"
+    },
+    {
+      "label": "build_ebook.py (ReportLab PDF Generator)",
+      "file_type": "code",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "build_ebook.py (reportlab pdf generator)",
+      "id": "concept_build_ebook_py"
+    },
+    {
+      "label": "Aria AI Voice Receptionist (ElevenLabs + Twilio + Claude Haiku)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "aria ai voice receptionist (elevenlabs + twilio + claude haiku)",
+      "id": "concept_aria_receptionist"
+    },
+    {
+      "label": "Graphify (Knowledge Graph, /opt/edvisingu/graphify-out/)",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "graphify (knowledge graph, /opt/edvisingu/graphify-out/)",
+      "id": "concept_graphify"
+    },
+    {
+      "label": "Vercel Dashboard (jarvis-dashboard-rho-pearl.vercel.app)",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "vercel dashboard (jarvis-dashboard-rho-pearl.vercel.app)",
+      "id": "concept_vercel_dashboard"
+    },
+    {
+      "label": "DALL-E 3 Image Generation",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "dall-e 3 image generation",
+      "id": "concept_dalle3"
+    },
+    {
+      "label": "PM2 Process Manager",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "pm2 process manager",
+      "id": "concept_pm2"
+    },
+    {
+      "label": "GitHub Repo (Zaid06Khan/jarvis-ai)",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "github repo (zaid06khan/jarvis-ai)",
+      "id": "concept_github_repo"
+    },
+    {
+      "label": ".claude/settings.local.json",
+      "file_type": "rationale",
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": ".claude/settings.local.json",
+      "id": "concept_claude_settings_local"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_json",
+      "target": "claude_settings_hooks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_hooks",
+      "target": "claude_settings_hooks_pretooluse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_local_json",
+      "target": "claude_settings_local_hooks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_local_json",
+      "target": "claude_settings_local_permissions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_settings_local_hooks",
+      "target": "claude_settings_local_hooks_posttooluse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_tasks_json",
+      "target": "codex_tasks_owners"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_tasks_json",
+      "target": "codex_tasks_tasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_tasks_json",
+      "target": "codex_tasks_updated"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_tasks_json",
+      "target": "codex_tasks_vps"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_tasks_owners",
+      "target": "codex_tasks_owners_claude_code"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_tasks_owners",
+      "target": "codex_tasks_owners_codex"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_tasks_vps",
+      "target": "codex_tasks_vps_code_root"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_tasks_vps",
+      "target": "codex_tasks_vps_host"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_tasks_vps",
+      "target": "codex_tasks_vps_ssh"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/tasks.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_tasks_vps",
+      "target": "codex_tasks_vps_status"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_json",
+      "target": "handoff_state_blockers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_json",
+      "target": "handoff_state_decisions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_json",
+      "target": "handoff_state_history"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_json",
+      "target": "handoff_state_open_questions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_json",
+      "target": "handoff_state_project"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_json",
+      "target": "handoff_state_session"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_json",
+      "target": "handoff_state_summary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_json",
+      "target": "handoff_state_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_session",
+      "target": "handoff_state_session_current_owner"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_session",
+      "target": "handoff_state_session_direction"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_session",
+      "target": "handoff_state_session_id"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_session",
+      "target": "handoff_state_session_last_writer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_session",
+      "target": "handoff_state_session_next_owner"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_session",
+      "target": "handoff_state_session_status"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_session",
+      "target": "handoff_state_session_updated_at"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_project",
+      "target": "handoff_state_project_coordination_layer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_project",
+      "target": "handoff_state_project_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_project",
+      "target": "handoff_state_project_repo_root"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_project_coordination_layer",
+      "target": "handoff_state_coordination_layer_shared_docs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_summary",
+      "target": "handoff_state_summary_completed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_summary",
+      "target": "handoff_state_summary_next_actions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_summary",
+      "target": "handoff_state_summary_objective"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/state.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_state_summary",
+      "target": "handoff_state_summary_status"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_py",
+      "target": "scripts_sync_handoff_load_state"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L191",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_py",
+      "target": "scripts_sync_handoff_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_py",
+      "target": "scripts_sync_handoff_ordered_state"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_py",
+      "target": "scripts_sync_handoff_render_list"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_py",
+      "target": "scripts_sync_handoff_render_next_actions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_py",
+      "target": "scripts_sync_handoff_render_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L181",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_py",
+      "target": "scripts_sync_handoff_write_if_changed"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_load_state",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_load_state",
+      "target": "path"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_load_state",
+      "target": "str"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L212",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_main",
+      "target": "scripts_sync_handoff_load_state"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L181",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_write_if_changed",
+      "target": "path"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_ordered_state",
+      "target": "str"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_render_list",
+      "target": "str"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_render_next_actions",
+      "target": "str"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_render_workflow",
+      "target": "str"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L181",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_write_if_changed",
+      "target": "str"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_ordered_state",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_render_list",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_render_next_actions",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_render_workflow",
+      "target": "any"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L213",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_main",
+      "target": "scripts_sync_handoff_ordered_state"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_render_workflow",
+      "target": "scripts_sync_handoff_render_list"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L155",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_render_workflow",
+      "target": "scripts_sync_handoff_render_next_actions"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L216",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_main",
+      "target": "scripts_sync_handoff_render_workflow"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L218",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_main",
+      "target": "scripts_sync_handoff_write_if_changed"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L181",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_write_if_changed",
+      "target": "bool"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync_handoff.py",
+      "source_location": "L191",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_sync_handoff_main",
+      "target": "int"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_md",
+      "target": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_build_order_follow_this_exactly"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_current_status_updated_2026_06_21"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_do_not"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_existing_work_do_not_rebuild"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_git_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_ide"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_my_accounts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_my_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_security_rules_non_negotiable"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_session_handoff"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_what_jarvis_does_for_me"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_agents_what_we_are_building"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_current_status_updated_2026_06_21",
+      "target": "jarvis_agents_active_work"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_current_status_updated_2026_06_21",
+      "target": "jarvis_agents_how_to_connect"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_current_status_updated_2026_06_21",
+      "target": "jarvis_agents_live_infrastructure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_current_status_updated_2026_06_21",
+      "target": "jarvis_agents_next_build_phases_the_original_10_step_build_order_below_is_complete_through_phase_9"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_current_status_updated_2026_06_21",
+      "target": "jarvis_agents_open_blocker_2026_06_21"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_agents_current_status_updated_2026_06_21",
+      "target": "jarvis_agents_running_on_the_vps_per_operator_last_asserted_2026_06_21"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_md",
+      "target": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_build_order_follow_this_exactly"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_current_status_updated_2026_06_21"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_do_not"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_existing_work_do_not_rebuild"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_git_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L159",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_ide"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_my_accounts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_my_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_security_rules_non_negotiable"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_what_jarvis_does_for_me"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_project_jarvis_edvisingu_ai_operating_system",
+      "target": "jarvis_claude_what_we_are_building"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L128",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_current_status_updated_2026_06_21",
+      "target": "jarvis_claude_active_work"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_current_status_updated_2026_06_21",
+      "target": "jarvis_claude_build_progress"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_current_status_updated_2026_06_21",
+      "target": "jarvis_claude_claude_code_codex_division_of_work"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_current_status_updated_2026_06_21",
+      "target": "jarvis_claude_how_to_connect_port_2222_user_deploy_not_root_not_port_22"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_current_status_updated_2026_06_21",
+      "target": "jarvis_claude_live_infrastructure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_current_status_updated_2026_06_21",
+      "target": "jarvis_claude_next_build_phases"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_current_status_updated_2026_06_21",
+      "target": "jarvis_claude_running_on_the_vps_verified_2026_06_21_via_ssh"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_current_status_updated_2026_06_21",
+      "target": "jarvis_claude_session_log_2026_06_21"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_current_status_updated_2026_06_21",
+      "target": "jarvis_claude_ssh_access_resolved_2026_06_21"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L179",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_graphify",
+      "target": "jarvis_claude_session_handoff"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "jarvis_claude_graphify",
+      "target": "jarvis_claude_two_graphs_query_the_right_one"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/bridge.md",
+      "source_location": "Mapping table row 1",
+      "weight": 1.0,
+      "source": "codex_bridge_md",
+      "target": "agents_md_project_jarvis"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/bridge.md",
+      "source_location": "Mapping table row 3",
+      "weight": 1.0,
+      "source": "codex_bridge_md",
+      "target": "agents_readme_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/bridge.md",
+      "source_location": "Mapping table row 1",
+      "weight": 1.0,
+      "source": "codex_bridge_md",
+      "target": "claude_md_project_jarvis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/bridge.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_bridge_md",
+      "target": "codex_bridge_claude_to_codex_bridge"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/bridge.md",
+      "source_location": "Mapping table row 2",
+      "weight": 1.0,
+      "source": "codex_bridge_md",
+      "target": "codex_reference_claude_settings_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": ".codex/README.md",
+      "source_location": null,
+      "weight": 0.9,
+      "source": "codex_readme_md",
+      "target": "codex_bridge_md"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/bridge.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_bridge_claude_to_codex_bridge",
+      "target": "codex_bridge_mapping"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/bridge.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_bridge_claude_to_codex_bridge",
+      "target": "codex_bridge_operating_rule"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/handoff.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_handoff_md",
+      "target": "codex_handoff_session_handoff_2026_06_21"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/README.md",
+      "source_location": "Primary sources of truth",
+      "weight": 1.0,
+      "source": "codex_readme_md",
+      "target": "agents_md_project_jarvis"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/README.md",
+      "source_location": "Primary sources of truth",
+      "weight": 1.0,
+      "source": "codex_readme_md",
+      "target": "agents_readme_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/README.md",
+      "source_location": "Primary sources of truth",
+      "weight": 1.0,
+      "source": "codex_readme_md",
+      "target": "claude_md_project_jarvis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_readme_md",
+      "target": "codex_readme_codex_bridge"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".codex/README.md",
+      "source_location": null,
+      "weight": 0.8,
+      "source": "codex_readme_md",
+      "target": "codex_safety_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/README.md",
+      "source_location": "Primary sources of truth",
+      "weight": 1.0,
+      "source": "codex_readme_md",
+      "target": "concept_claude_settings_local"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/safety.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_safety_md",
+      "target": "codex_safety_safety_rules"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "Source line",
+      "weight": 1.0,
+      "source": "codex_reference_claude_settings_md",
+      "target": "concept_claude_settings_local"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "Hook summary",
+      "weight": 0.9,
+      "source": "codex_reference_claude_settings_md",
+      "target": "concept_graphify"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "Permission summary \u2014 remote SSH health-check",
+      "weight": 0.9,
+      "source": "codex_reference_claude_settings_md",
+      "target": "concept_vps"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "codex_reference_claude_settings_md",
+      "target": "reference_claude_settings_sanitized_claude_settings_summary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "reference_claude_settings_sanitized_claude_settings_summary",
+      "target": "reference_claude_settings_hook_summary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "reference_claude_settings_sanitized_claude_settings_summary",
+      "target": "reference_claude_settings_permission_summary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".codex/reference/claude-settings.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "reference_claude_settings_sanitized_claude_settings_summary",
+      "target": "reference_claude_settings_practical_note"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_content_factory_md",
+      "target": "agents_content_factory_content_factory"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/content-factory.md",
+      "source_location": "Dependencies",
+      "weight": 1.0,
+      "source": "agents_content_factory_md",
+      "target": "agents_research_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/content-factory.md",
+      "source_location": "Dependencies \u2014 publishing automation",
+      "weight": 0.9,
+      "source": "agents_content_factory_md",
+      "target": "concept_n8n"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Dependencies \u2014 all specialist roles",
+      "weight": 0.8,
+      "source": "agents_orchestrator_md",
+      "target": "agents_content_factory_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/README.md",
+      "source_location": "Role Index",
+      "weight": 1.0,
+      "source": "agents_readme_md",
+      "target": "agents_content_factory_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/social-media.md",
+      "source_location": "Dependencies",
+      "weight": 1.0,
+      "source": "agents_social_media_md",
+      "target": "agents_content_factory_md"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "AGENTS.md",
+      "source_location": "build_ebook.py feeds ebook content pipeline",
+      "weight": 0.8,
+      "source": "concept_build_ebook_py",
+      "target": "agents_content_factory_md"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_content_factory_content_factory",
+      "target": "agents_content_factory_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_content_factory_content_factory",
+      "target": "agents_content_factory_inputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_content_factory_content_factory",
+      "target": "agents_content_factory_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_content_factory_content_factory",
+      "target": "agents_content_factory_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_content_factory_content_factory",
+      "target": "agents_content_factory_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/content-factory.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_content_factory_content_factory",
+      "target": "agents_content_factory_safety"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/hermes.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_hermes_md",
+      "target": "agents_hermes_hermes_gateway"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/hermes.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_hermes_md",
+      "target": "concept_hermes_agent"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Dependencies \u2014 all specialist roles",
+      "weight": 0.8,
+      "source": "agents_orchestrator_md",
+      "target": "agents_hermes_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/README.md",
+      "source_location": "Role Index",
+      "weight": 1.0,
+      "source": "agents_readme_md",
+      "target": "agents_hermes_md"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "CLAUDE.md",
+      "source_location": "DALL-E 3 via hermes-image agent",
+      "weight": 0.8,
+      "source": "concept_dalle3",
+      "target": "agents_hermes_md"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/hermes.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_hermes_hermes_gateway",
+      "target": "agents_hermes_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/hermes.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_hermes_hermes_gateway",
+      "target": "agents_hermes_inputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/hermes.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_hermes_hermes_gateway",
+      "target": "agents_hermes_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/hermes.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_hermes_hermes_gateway",
+      "target": "agents_hermes_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/hermes.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_hermes_hermes_gateway",
+      "target": "agents_hermes_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/hermes.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_hermes_hermes_gateway",
+      "target": "agents_hermes_safety"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/infra.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_infra_md",
+      "target": "agents_infra_infra"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infra.md",
+      "source_location": "Responsibilities \u2014 container lifecycle",
+      "weight": 1.0,
+      "source": "agents_infra_md",
+      "target": "concept_docker"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infra.md",
+      "source_location": "Responsibilities \u2014 Track VPS state",
+      "weight": 1.0,
+      "source": "agents_infra_md",
+      "target": "concept_vps"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Dependencies \u2014 all specialist roles",
+      "weight": 0.8,
+      "source": "agents_orchestrator_md",
+      "target": "agents_infra_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/README.md",
+      "source_location": "Role Index",
+      "weight": 1.0,
+      "source": "agents_readme_md",
+      "target": "agents_infra_md"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/infra.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_infra_infra",
+      "target": "agents_infra_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/infra.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_infra_infra",
+      "target": "agents_infra_inputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/infra.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_infra_infra",
+      "target": "agents_infra_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/infra.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_infra_infra",
+      "target": "agents_infra_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/infra.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_infra_infra",
+      "target": "agents_infra_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/infra.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_infra_infra",
+      "target": "agents_infra_safety"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/n8n.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_n8n_md",
+      "target": "agents_n8n_n8n"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/n8n.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_n8n_n8n",
+      "target": "agents_n8n_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/n8n.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_n8n_n8n",
+      "target": "agents_n8n_inputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/n8n.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_n8n_n8n",
+      "target": "agents_n8n_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/n8n.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_n8n_n8n",
+      "target": "agents_n8n_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/n8n.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_n8n_n8n",
+      "target": "agents_n8n_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/n8n.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_n8n_n8n",
+      "target": "agents_n8n_safety"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Responsibilities",
+      "weight": 1.0,
+      "source": "agents_orchestrator_md",
+      "target": "agents_md_project_jarvis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_orchestrator_md",
+      "target": "agents_orchestrator_orchestrator"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Dependencies \u2014 all specialist roles",
+      "weight": 0.8,
+      "source": "agents_orchestrator_md",
+      "target": "agents_receptionist_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Dependencies \u2014 all specialist roles",
+      "weight": 0.8,
+      "source": "agents_orchestrator_md",
+      "target": "agents_research_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Dependencies \u2014 all specialist roles",
+      "weight": 0.85,
+      "source": "agents_orchestrator_md",
+      "target": "agents_router_fastapi_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Dependencies \u2014 all specialist roles",
+      "weight": 0.8,
+      "source": "agents_orchestrator_md",
+      "target": "agents_social_media_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Dependencies \u2014 all specialist roles",
+      "weight": 0.8,
+      "source": "agents_orchestrator_md",
+      "target": "agents_supabase_memory_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Responsibilities",
+      "weight": 1.0,
+      "source": "agents_orchestrator_md",
+      "target": "claude_md_project_jarvis"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/orchestrator.md",
+      "source_location": "Dependencies \u2014 all specialist roles",
+      "weight": 0.8,
+      "source": "agents_orchestrator_md",
+      "target": "concept_n8n"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/README.md",
+      "source_location": "Role Index",
+      "weight": 1.0,
+      "source": "agents_readme_md",
+      "target": "agents_orchestrator_md"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_orchestrator_orchestrator",
+      "target": "agents_orchestrator_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_orchestrator_orchestrator",
+      "target": "agents_orchestrator_inputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_orchestrator_orchestrator",
+      "target": "agents_orchestrator_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_orchestrator_orchestrator",
+      "target": "agents_orchestrator_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_orchestrator_orchestrator",
+      "target": "agents_orchestrator_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/orchestrator.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_orchestrator_orchestrator",
+      "target": "agents_orchestrator_safety"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_readme_md",
+      "target": "agents_readme_agent_roles"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/README.md",
+      "source_location": "Role Index",
+      "weight": 1.0,
+      "source": "agents_readme_md",
+      "target": "agents_receptionist_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/README.md",
+      "source_location": "Role Index",
+      "weight": 1.0,
+      "source": "agents_readme_md",
+      "target": "agents_research_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/README.md",
+      "source_location": "Role Index",
+      "weight": 1.0,
+      "source": "agents_readme_md",
+      "target": "agents_router_fastapi_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/README.md",
+      "source_location": "Role Index",
+      "weight": 1.0,
+      "source": "agents_readme_md",
+      "target": "agents_social_media_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/README.md",
+      "source_location": "Role Index",
+      "weight": 1.0,
+      "source": "agents_readme_md",
+      "target": "agents_supabase_memory_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/README.md",
+      "source_location": "Role Index",
+      "weight": 1.0,
+      "source": "agents_readme_md",
+      "target": "concept_n8n"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/README.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_readme_agent_roles",
+      "target": "agents_readme_role_index"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_receptionist_md",
+      "target": "agents_receptionist_receptionist"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "AGENTS.md",
+      "source_location": "Existing Work \u2014 Aria AI voice receptionist",
+      "weight": 0.9,
+      "source": "concept_aria_receptionist",
+      "target": "agents_receptionist_md"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_receptionist_receptionist",
+      "target": "agents_receptionist_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_receptionist_receptionist",
+      "target": "agents_receptionist_inputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_receptionist_receptionist",
+      "target": "agents_receptionist_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_receptionist_receptionist",
+      "target": "agents_receptionist_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_receptionist_receptionist",
+      "target": "agents_receptionist_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/receptionist.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_receptionist_receptionist",
+      "target": "agents_receptionist_safety"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/research.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_research_md",
+      "target": "agents_research_research"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/research.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_research_research",
+      "target": "agents_research_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/research.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_research_research",
+      "target": "agents_research_inputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/research.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_research_research",
+      "target": "agents_research_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/research.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_research_research",
+      "target": "agents_research_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/research.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_research_research",
+      "target": "agents_research_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/research.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_research_research",
+      "target": "agents_research_safety"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_router_fastapi_md",
+      "target": "agents_router_fastapi_fastapi_router"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/router-fastapi.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_router_fastapi_md",
+      "target": "concept_fastapi_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_router_fastapi_fastapi_router",
+      "target": "agents_router_fastapi_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_router_fastapi_fastapi_router",
+      "target": "agents_router_fastapi_inputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_router_fastapi_fastapi_router",
+      "target": "agents_router_fastapi_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_router_fastapi_fastapi_router",
+      "target": "agents_router_fastapi_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_router_fastapi_fastapi_router",
+      "target": "agents_router_fastapi_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/router-fastapi.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_router_fastapi_fastapi_router",
+      "target": "agents_router_fastapi_safety"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/social-media.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_social_media_md",
+      "target": "agents_social_media_social_media"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/social-media.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_social_media_social_media",
+      "target": "agents_social_media_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/social-media.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_social_media_social_media",
+      "target": "agents_social_media_inputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/social-media.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_social_media_social_media",
+      "target": "agents_social_media_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/social-media.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_social_media_social_media",
+      "target": "agents_social_media_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/social-media.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_social_media_social_media",
+      "target": "agents_social_media_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/social-media.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_social_media_social_media",
+      "target": "agents_social_media_safety"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_supabase_memory_md",
+      "target": "agents_supabase_memory_supabase_memory"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/supabase-memory.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_supabase_memory_md",
+      "target": "concept_supabase"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_supabase_memory_supabase_memory",
+      "target": "agents_supabase_memory_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_supabase_memory_supabase_memory",
+      "target": "agents_supabase_memory_inputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_supabase_memory_supabase_memory",
+      "target": "agents_supabase_memory_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_supabase_memory_supabase_memory",
+      "target": "agents_supabase_memory_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_supabase_memory_supabase_memory",
+      "target": "agents_supabase_memory_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/supabase-memory.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_supabase_memory_supabase_memory",
+      "target": "agents_supabase_memory_safety"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_readme_md",
+      "target": "handoff_readme_handoff"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_workflow_md",
+      "target": "handoff_workflow_handoff_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_workflow_handoff_workflow",
+      "target": "handoff_workflow_blockers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_workflow_handoff_workflow",
+      "target": "handoff_workflow_completed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_workflow_handoff_workflow",
+      "target": "handoff_workflow_current_context"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_workflow_handoff_workflow",
+      "target": "handoff_workflow_current_ownership"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_workflow_handoff_workflow",
+      "target": "handoff_workflow_decisions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_workflow_handoff_workflow",
+      "target": "handoff_workflow_open_questions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_workflow_handoff_workflow",
+      "target": "handoff_workflow_open_work"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_workflow_handoff_workflow",
+      "target": "handoff_workflow_quick_inject"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoff/WORKFLOW.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "handoff_workflow_handoff_workflow",
+      "target": "handoff_workflow_update_order"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "Existing Work",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_aria_receptionist"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "My Stack",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_bitwarden"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "Existing Work",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_build_ebook_py"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "My Stack",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_claude_sonnet"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "My Stack",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_docker"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "My Stack",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_fastapi_router"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "Live Infrastructure",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_github_repo"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "Running on VPS",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_graphify"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "My Stack",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_hermes_agent"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "My Stack",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_n8n"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "My Stack",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_openjarvis"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "My Stack",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_openrouter"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "My Stack",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_strands_agents_sdk"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "My Stack",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_supabase"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "Live Infrastructure",
+      "weight": 1.0,
+      "source": "agents_md_project_jarvis",
+      "target": "concept_vps"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": ".codex/bridge.md",
+      "source_location": "Mapping table row 1",
+      "weight": 1.0,
+      "source": "claude_md_project_jarvis",
+      "target": "agents_md_project_jarvis"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "Running on the VPS",
+      "weight": 1.0,
+      "source": "claude_md_project_jarvis",
+      "target": "concept_dalle3"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "Running on the VPS",
+      "weight": 1.0,
+      "source": "claude_md_project_jarvis",
+      "target": "concept_pm2"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "Running on the VPS",
+      "weight": 1.0,
+      "source": "claude_md_project_jarvis",
+      "target": "concept_redis"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "Live Infrastructure",
+      "weight": 1.0,
+      "source": "claude_md_project_jarvis",
+      "target": "concept_vercel_dashboard"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "AGENTS.md",
+      "source_location": "OpenJarvis top level orchestrator / Strands Agents SDK replaces Open-Claw",
+      "weight": 0.9,
+      "source": "concept_openjarvis",
+      "target": "concept_strands_agents_sdk"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CLAUDE.md",
+      "source_location": "hermes-core routes through FastAPI agent fleet",
+      "weight": 0.85,
+      "source": "concept_hermes_agent",
+      "target": "concept_fastapi_router"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CLAUDE.md",
+      "source_location": "22 specialist Strands agents behind FastAPI router on port 8000",
+      "weight": 0.85,
+      "source": "concept_fastapi_router",
+      "target": "concept_strands_agents_sdk"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "CLAUDE.md",
+      "source_location": "FastAPI router managed by PM2",
+      "weight": 0.95,
+      "source": "concept_fastapi_router",
+      "target": "concept_pm2"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "cron 0 2 * * * \u2192 POST http://127.0.0.1:8000/overnight/run",
+      "weight": 1.0,
+      "source": "concept_n8n",
+      "target": "concept_fastapi_router"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "CLAUDE.md",
+      "source_location": "n8n + redis \u2014 both Up in Docker",
+      "weight": 0.9,
+      "source": "concept_n8n",
+      "target": "concept_redis"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "Graphify at /opt/edvisingu/graphify-out/ on VPS",
+      "weight": 1.0,
+      "source": "concept_graphify",
+      "target": "concept_vps"
+    }
+  ],
+  "hyperedges": []
+}

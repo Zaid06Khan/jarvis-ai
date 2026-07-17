@@ -1,0 +1,43 @@
+version: 1
+session:
+  id: jarvis-session-handoff
+  status: active
+  updated_at: "2026-06-21T23:48:44.2082675-04:00"
+  last_writer: codex
+  current_owner: codex
+  next_owner: claude-code
+  direction: codex-to-claude
+project:
+  name: Jarvis
+  repo_root: "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis"
+  coordination_layer:
+    shared_docs:
+      - CLAUDE.md
+      - AGENTS.md
+      - .codex/bridge.md
+      - .codex/safety.md
+      - agents/README.md
+      - handoff/WORKFLOW.md
+summary:
+  objective: "Pass context cleanly between Codex and Claude Code using repo-local state."
+  status: "Handoff scaffold created and ready for use."
+  completed:
+    - ".codex bridge docs created"
+    - "agents role contracts created"
+    - "handoff structured state added"
+  next_actions:
+    - owner: claude-code
+      task: "Read handoff/WORKFLOW.md, then continue work from handoff/state.yaml."
+    - owner: codex
+      task: "Keep the structured state and markdown summary in sync after each turn."
+decisions:
+  - "Use a shared repo-local handoff instead of direct agent-to-agent chat."
+  - "Keep the state machine simple and manually updateable."
+blockers: []
+open_questions: []
+history:
+  - at: "2026-06-21T23:48:44.2082675-04:00"
+    actor: codex
+    event: "handoff_scaffold_created"
+    note: "Created .codex bridge docs, agents role docs, and handoff state files."
+

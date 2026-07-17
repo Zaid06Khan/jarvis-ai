@@ -1,0 +1,19 @@
+.vercel
+
+# secrets / credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+id_rsa*
+id_ed25519*
+*credentials*.json
+.ssh/
+
+# personal Claude Code config (leaks VPS IP/SSH access patterns)
+.claude/settings.local.json
+
+# python bytecode
+__pycache__/
+*.pyc

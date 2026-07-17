@@ -1,0 +1,132 @@
+{
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\.claude\\settings.local.json": {
+    "mtime": 1782094052.1732934,
+    "ast_hash": "3ae0fc9b739cedb58314cff8be55bda6",
+    "semantic_hash": "3ae0fc9b739cedb58314cff8be55bda6"
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\.claude\\settings.json": {
+    "mtime": 1782094197.6080904,
+    "ast_hash": "5d6ecd96cf065b16e8bb9fbf5d7d8f0d",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\.codex\\tasks.json": {
+    "mtime": 1782094449.3469937,
+    "ast_hash": "2e2ee69efb0ef3119a05baff710a518f",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\handoff\\state.json": {
+    "mtime": 1782101107.5164213,
+    "ast_hash": "de2fe6d8e61c82446f06c29c37149187",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\scripts\\sync_handoff.py": {
+    "mtime": 1782101133.1927257,
+    "ast_hash": "7609a73acc23b4ec04e693d5f3567b3e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\AGENTS.md": {
+    "mtime": 1782100258.4242177,
+    "ast_hash": "bd565e6c02ff339e6f00415304a0af6e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\CLAUDE.md": {
+    "mtime": 1782100258.3412263,
+    "ast_hash": "b83d233a80f59dda4c94127c79127ebc",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\.codex\\bridge.md": {
+    "mtime": 1782100258.600776,
+    "ast_hash": "049b4d057f005fe7a6e2664fe3033c68",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\.codex\\handoff.md": {
+    "mtime": 1782094459.4771502,
+    "ast_hash": "10cf7c138a00fe598c3474d3f87f4d13",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\.codex\\README.md": {
+    "mtime": 1782100258.512585,
+    "ast_hash": "498794ce2ebb8c8a01f778d41f474688",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\.codex\\safety.md": {
+    "mtime": 1782083046.6586869,
+    "ast_hash": "5db7ed6b7eb8c737c33143305536bbae",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\.codex\\reference\\claude-settings.md": {
+    "mtime": 1782083046.7998226,
+    "ast_hash": "9736d8b5a47915141a167c282462b1b1",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\content-factory.md": {
+    "mtime": 1782083047.5563564,
+    "ast_hash": "163d135c07ded00efe55f5c03a1bb270",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\hermes.md": {
+    "mtime": 1782083047.2891676,
+    "ast_hash": "f1b748e4f2c706a3b200052dbce25fd5",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\infra.md": {
+    "mtime": 1782083047.1172657,
+    "ast_hash": "36242c4a3a52ae56e56a92067ce61f0c",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\n8n.md": {
+    "mtime": 1782083047.4675896,
+    "ast_hash": "9b418c8337d5b9b858734d010ac60889",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\orchestrator.md": {
+    "mtime": 1782083047.0241375,
+    "ast_hash": "5aaa612f6e17659c1f76ed2b7125359e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\README.md": {
+    "mtime": 1782100258.6873055,
+    "ast_hash": "ada6b3c980b3b5bd3edc9050be512b1e",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\receptionist.md": {
+    "mtime": 1782083047.8101466,
+    "ast_hash": "3f33d149bfd8d001824447718db9fbb7",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\research.md": {
+    "mtime": 1782083047.642572,
+    "ast_hash": "0a3d8c373a85666182e309156949b121",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\router-fastapi.md": {
+    "mtime": 1782083047.2035751,
+    "ast_hash": "bd8f66bf2fb674e663e136f44149623d",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\social-media.md": {
+    "mtime": 1782083047.7256012,
+    "ast_hash": "6d9dd306bc7bfd9091f869a416e362a7",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\agents\\supabase-memory.md": {
+    "mtime": 1782083047.3772447,
+    "ast_hash": "a86a356837e7f8a10d0f685011ff4f30",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\handoff\\README.md": {
+    "mtime": 1782101098.9867535,
+    "ast_hash": "a737a3da466dfe8347ebdab2be38d147",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\handoff\\state.yaml": {
+    "mtime": 1782100258.9181063,
+    "ast_hash": "dc812a5e0c47e51eca4c5b4e4f9809e0",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Zaid Khan\\Claude Projects\\Jarvis\\handoff\\WORKFLOW.md": {
+    "mtime": 1782101136.6669905,
+    "ast_hash": "2c896bde04a1fe49faa2a1c04d2a4dcb",
+    "semantic_hash": ""
+  }
+}

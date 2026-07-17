@@ -1,0 +1,181 @@
+{
+  "communities": {
+    "0": [
+      "agents_content_factory_md",
+      "agents_orchestrator_md",
+      "agents_readme_md",
+      "agents_receptionist_md",
+      "agents_research_md",
+      "agents_router_fastapi_md",
+      "agents_social_media_md",
+      "agents_supabase_memory_md",
+      "concept_n8n",
+      "concept_supabase"
+    ],
+    "1": [
+      "agents_infra_md",
+      "codex_bridge_md",
+      "codex_readme_md",
+      "codex_reference_claude_settings_md",
+      "codex_safety_md",
+      "concept_claude_settings_local",
+      "concept_docker",
+      "concept_graphify",
+      "concept_vps"
+    ],
+    "2": [
+      "agents_md_project_jarvis",
+      "concept_aria_receptionist",
+      "concept_bitwarden",
+      "concept_build_ebook_py",
+      "concept_claude_sonnet",
+      "concept_github_repo",
+      "concept_openrouter"
+    ],
+    "3": [
+      "claude_settings_local_hooks",
+      "claude_settings_local_hooks_posttooluse",
+      "claude_settings_local_json",
+      "claude_settings_local_permissions",
+      "claude_settings_local_permissions_allow"
+    ],
+    "4": [
+      "claude_md_project_jarvis",
+      "concept_dalle3",
+      "concept_pm2",
+      "concept_redis",
+      "concept_vercel_dashboard"
+    ],
+    "5": [
+      "agents_hermes_md",
+      "concept_fastapi_router",
+      "concept_hermes_agent"
+    ],
+    "6": [
+      "concept_openjarvis",
+      "concept_strands_agents_sdk"
+    ]
+  },
+  "cohesion": {
+    "0": 0.4222222222222222,
+    "1": 0.2777777777777778,
+    "2": 0.2857142857142857,
+    "3": 0.4,
+    "4": 0.4,
+    "5": 0.6666666666666666,
+    "6": 1.0
+  },
+  "gods": [
+    {
+      "id": "agents_md_project_jarvis",
+      "label": "Project Jarvis \u2014 EdVisingU AI Operating System (AGENTS.md)",
+      "degree": 19
+    },
+    {
+      "id": "agents_orchestrator_md",
+      "label": "Orchestrator Agent",
+      "degree": 12
+    },
+    {
+      "id": "agents_readme_md",
+      "label": "Agent Roles README",
+      "degree": 12
+    },
+    {
+      "id": "claude_md_project_jarvis",
+      "label": "Project Jarvis \u2014 EdVisingU AI Operating System (CLAUDE.md)",
+      "degree": 8
+    },
+    {
+      "id": "codex_readme_md",
+      "label": "Codex Bridge README",
+      "degree": 6
+    },
+    {
+      "id": "agents_content_factory_md",
+      "label": "Content Factory Agent",
+      "degree": 6
+    },
+    {
+      "id": "concept_fastapi_router",
+      "label": "FastAPI Specialist Agent Router (port 8000)",
+      "degree": 6
+    },
+    {
+      "id": "concept_n8n",
+      "label": "n8n Workflow Automation",
+      "degree": 6
+    },
+    {
+      "id": "codex_bridge_md",
+      "label": "Claude to Codex Bridge",
+      "degree": 5
+    },
+    {
+      "id": "codex_reference_claude_settings_md",
+      "label": "Sanitized Claude Settings Summary",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Project Jarvis \u2014 EdVisingU AI Operating System (CLAUDE.md)",
+      "target": "Project Jarvis \u2014 EdVisingU AI Operating System (AGENTS.md)",
+      "source_files": [
+        "CLAUDE.md",
+        "AGENTS.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "semantically_similar_to",
+      "why": "connects across different repos/directories; bridges separate communities; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "build_ebook.py (ReportLab PDF Generator)",
+      "target": "Content Factory Agent",
+      "source_files": [
+        "AGENTS.md",
+        "agents/content-factory.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `build_ebook.py (ReportLab PDF Generator)` unexpectedly reaches hub `Content Factory Agent`"
+    },
+    {
+      "source": "FastAPI Specialist Agent Router (port 8000)",
+      "target": "PM2 Process Manager",
+      "source_files": [
+        "AGENTS.md",
+        "CLAUDE.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "shares_data_with",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `PM2 Process Manager` unexpectedly reaches hub `FastAPI Specialist Agent Router (port 8000)`"
+    },
+    {
+      "source": "n8n Workflow Automation",
+      "target": "Redis (Docker, port 6379)",
+      "source_files": [
+        "AGENTS.md",
+        "CLAUDE.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "shares_data_with",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Redis (Docker, port 6379)` unexpectedly reaches hub `n8n Workflow Automation`"
+    },
+    {
+      "source": "Project Jarvis \u2014 EdVisingU AI Operating System (AGENTS.md)",
+      "target": "Graphify (Knowledge Graph, /opt/edvisingu/graphify-out/)",
+      "source_files": [
+        "AGENTS.md",
+        "CLAUDE.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 6595,
+    "output": 7278
+  }
+}
